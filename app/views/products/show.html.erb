@@ -1,0 +1,15 @@
+<div class="container-fluid form-template">
+  <div class="row">
+    <div class="  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
+
+
+      <div class="size" style="width: 100px; font-size: 20px">
+
+      <%=image_tag @products.image.url(:medium) if @products.image.present? %>
+      Title:<%= @products.title %>
+      Description:<%= @products.description %>
+      Calories:<%= @products.calories %>
+    </div>
+    </div>
+  </div>
+</div>

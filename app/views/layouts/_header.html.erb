@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sugar Market</title>
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
+  </head>
+  <body>
+    <nav id="nav">
+      <section class="top">
+        <div class="pull-left">
+          <%= image_tag("Logo.png", :class => "Logo")%>
+          <%= image_tag("Logo-small.png", :class => "Logo-small")%>
+        </div>
+        <div class="pull-right">
+          <a class="move" href="#">
+            <i class="fa fa-bars fa-2x"></i>
+          </a>
+        </div>
+        <div class="logIn pull-right">
+          <% if customer_signed_in? %>
+        <%= link_to  current_customer.full_name, customer_path(current_customer.id) %>
+
+          <% elsif %>
+          <b><i><%= link_to 'Sign In', new_session_path %></i></b>
+            <% end  %>
+        </div>
+      </section>
+    </nav>

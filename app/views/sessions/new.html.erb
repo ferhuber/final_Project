@@ -1,0 +1,30 @@
+<div class="container-fluid form-template">
+  <div class="row">
+    <div class="  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
+
+
+        <h1>Sign In</h1>
+
+        <%= form_tag sessions_path do %>
+          <div>
+            <%= label_tag :email %>
+            <%= email_field_tag :email %>
+          </div>
+          <div>
+            <%= label_tag :password %>
+            <%= password_field_tag :password %>
+          </div>
+
+          <div class="button">
+            <%= submit_tag 'Sign In' %>
+          </div>
+
+        <% end %>
+
+        <%= link_to 'Sign Up', new_customer_path %>
+        <%= link_to 'Back',  root_path%>
+        <%= link_to 'Forgot password?', new_passwords_reset_path %>
+        <%= link_to 'Don\'t have an account? Sign Up', new_customer_path %>
+    </div>
+  </div>
+</div>

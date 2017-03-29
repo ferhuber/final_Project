@@ -1,0 +1,366 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Open+Sans+Condensed:300');
+body {
+    color: #f16169;
+    background: #f16169;
+    background: -webkit-linear-gradient(#f16169, #ff7555, #ff5572);
+    background: -o-linear-gradient(#f16169, #ff7555, #ff5572);
+    background: -moz-linear-gradient(#f16169, #ff7555, #ff5572);
+    background: linear-gradient(#f16169, #ff7555, #ff5572);
+    margin: 0;
+    min-width: 980px;
+    padding: 0;
+}
+
+a{
+  color: white ;
+}
+
+p{
+        margin: 0 0 20px 0;
+}
+
+p, ul{
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size-adjust:0.488;
+        font-weight:200;
+        font-style:normal;
+}
+
+img{
+        border: 0;
+        width: 100%;
+}
+
+h1, #pixels{
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size-adjust:0.40;
+        font-weight:700;
+        font-style:normal;
+}
+
+h2{
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size-adjust:0.531;
+        font-weight:500;
+        font-style:normal;
+}
+
+#header h1, #pixels{
+        color: #48941A;
+}
+
+.float-left{
+        float: left;
+        margin: 0 0 0 20px;
+}
+
+.float-right{
+        float: right;
+        margin: 0 20px 0 0;
+}
+
+.center{
+        font-size: 2.5em;
+        padding: 80px 0 0 0;
+        text-align: center;
+}
+
+#nav{
+        list-style: none;
+        position: fixed;
+        right: 20px;
+        width: 98%;
+        z-index: 500;
+}
+
+#nav .top.solid {
+    background: #f16169;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 70px;
+    display: none;
+    z-index: 500;
+
+}
+
+#nav .top.solid .toggleDrawer i {
+    padding-top: 8px;
+    margin-left: -15px;
+}
+
+#nav .top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 30px;
+    height: auto;
+    z-index: 500;
+    margin-left: -15px;
+    transition: all .5s;
+}
+
+
+#nav li{
+        margin: 0 0 15px 0;
+}
+
+#nav a{
+      color: white;
+}
+
+#nav a:hover{
+  color: #f05d66;
+}
+
+#nav .top.solid a:hover{
+  color: white;
+}
+
+.Logo-small{
+  display: none;
+  width: 70%;
+}
+
+.logIn{
+  margin-right: 15px;
+}
+
+.logIn a{
+  text-decoration: none !important;
+}
+
+#header, #intro, #second{
+        width: 100%;
+}
+
+#intro{
+        background: image-url('hero-top.png') 50% 0 no-repeat fixed;
+		    background-size: cover;
+        color: white;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+}
+
+
+#intro .slogan {
+    font-size: 2.25em;
+    margin-bottom: 15px;
+    margin-top: 18vh;
+    line-height: 1em;
+    font-family: 'Quicksand';
+    color: white;
+    border: 6px solid rgba(255, 255, 255, 0.7);
+    width: 50%;
+    margin-left: 25%;
+    padding: 40px;
+    // height: 65vh;
+}
+
+#intro .secondary-slogan {
+font-size: 1.2em;
+    color: rgba(255,255,255,.7);
+    line-height: 1em;
+    font-family: 'Alegreya SC';
+}
+
+#intro .top.solid {
+    background: #f16169;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 85px;
+}
+
+
+#intro .top.solid .toggleDrawer i {
+    padding-top: 8px;
+}
+
+
+#second{
+
+        background-size: cover;
+        color: white;
+        height: 100vh;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 0;
+        width: 100%;
+}
+
+
+#third{
+        background: image-url('store.jpg') 50% 0 no-repeat fixed;
+		    background-size: cover;
+
+        color: black;
+        height: 80vh;
+        // padding: 100px 0 0 0;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 6%;
+}
+
+#third .about-us{
+  padding: 6%;
+  font-family: 'Alegreya Sans' !important;
+  text-align: center;
+  color: black;
+}
+
+
+#fourth{
+        background: image-url('blue_mac2.jpg') 50% 0 no-repeat fixed;
+		    background-size: cover;
+        color: white;
+        height: 40vh;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 6%;
+}
+
+
+
+#fifth{
+        background: #ccc;
+        height: 400px;
+        margin: 0 auto;
+        padding: 40px 0 0 0;
+}
+
+.story3{
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+        margin: 0 auto;
+        width: 100%;
+        overflow: auto;
+        // height: 30vh;
+
+}
+
+.story4{
+
+  color: white;
+  margin: 0 auto;
+  width: 100%;
+  overflow: auto;
+  // padding-top: 3%;
+
+}
+
+
+//////////////menu direita ////////////////////////
+
+#drawer-right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-right: -300px ;
+    background: white;
+    width: 300px;
+    padding: 20px;
+    z-index: 999;
+    transition: all .5s;
+    text-decoration: none;
+}
+
+
+
+#drawer-right .nav-pills>li>a {
+	font-size: 18px;
+	border-radius: 0;
+    color: #f16169;
+    text-align: center;
+    text-decoration: none;
+}
+
+#drawer-right .phone{
+    position: fixed;
+    margin-left: 5%;
+    margin-top: 20px;
+}
+#drawer-right .phone p{
+    position: relative;
+    float: right;
+    padding-left: 12px;
+    padding-top: 4px;
+    font-size: 1.2em;
+}
+
+#drawer-right .social{margin-top: 50px}
+#drawer-right .social ul {
+    list-style: none;
+    padding-left: 25px;
+}
+#drawer-right .social ul > li {
+    display: inline-block;
+    margin: 3%;
+}
+#drawer-right .social ul > li > a:hover{
+	color: white;
+}
+#drawer-right .fa{
+    color: #f16169;
+}
+
+.nav> li> a:focus, .nav>li>a:hover{
+  text-decoration: none;
+  background-color: rgba(241, 97, 105, 0.17);
+}
+
+
+////////////////second///////////////
+
+.feature {
+    background-color: #ffffff;
+    margin-bottom: 2%;
+    padding: 30px;
+    position: relative;
+    height: 350px;
+    z-index: 1;
+}
+
+@media (min-width: 768px){
+    .col-sm-3{
+  float: left;
+  width: 25%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  }
+}
+
+.recent-work {
+    width: 100%;
+    padding-bottom: 25%;
+    background: #FFFFFF;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 40%;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+
+
+/////////////// FORMS //////////////////////
+
+.form-template{
+  background-color: white;
+  margin-top: 15vh;
+}
+
+textarea.form-control {
+    height: auto;
+    width: 78%;
+}

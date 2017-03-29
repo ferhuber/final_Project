@@ -1,0 +1,32 @@
+<div class="container-fluid form-template">
+  <div class="row">
+    <div class="  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
+
+    <h2>Update your informations</h2>
+    <%= @user.errors.full_messages.join(', ') %>
+
+    <%= form_for @user do |f| %>
+    <div>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+    <div>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+
+<div>
+
+</div>
+
+    <div class="button">
+      <%= f.submit 'Update' %>
+    </div>
+
+
+
+    <% end %>
+
+  </div>
+</div>
+</div>
