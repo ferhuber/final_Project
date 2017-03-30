@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
 
+
   def index
     # render json:[params]
     # @products = Product.new
@@ -9,9 +10,19 @@ class SearchController < ApplicationController
     @types = Type.all.pluck(:type_of).uniq
 
 
-    @product = Product.where(:calories => params[:calories])
+    @product = Product.search_by_calories(params[:calories])
+
+
+    # @product = Product.where(:calories => params[:calories])
+    # @product = Product.includes(:calories => params[:calories])
+
+
+
 
     render 'products/show'
   end
 
 end
+
+
+# Product.search_by_title('cake').where('calories > ?', 900)

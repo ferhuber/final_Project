@@ -5,6 +5,10 @@ class ProductsController < ApplicationController
   #
   # before_action :authorize, only: [:edit, :destroy, :update]
 
+
+
+
+
   def new
     @product  = Product.new
 
