@@ -3,13 +3,35 @@
     <div class="  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
 
 
-      <div class="size" style="width: 100px; font-size: 20px">
+      <div class="size" style="width: 200px; font-size: 20px">
 
-      <%=image_tag @products.image.url(:medium) if @products.image.present? %>
-      Title:<%= @products.title %>
-      Description:<%= @products.description %>
-      Calories:<%= @products.calories %>
-    </div>
+      <%#= @products.each do |p| %>
+      <%#= image_tag p.image %>
+      <!-- <p>title:<%#= p.title %></p>
+      <p>desc:<%#= p.description %></p>
+      <p>calories:<%#= p.calories %></p> -->
+      <%# end %>
+
+      <%= form_tag "/search", method: :get do %>
+
+        Calories:<%= select_tag "calories", options_for_select(@calories) %>
+        Ingredients:<%= select_tag "ingredient", options_for_select(@ingredients) %>
+        Type:<%= select_tag "type_of", options_for_select(@types) %>
+
+
+        <%#= select_tag "ingredient", options_from_collection_for_select(@ingredients, "id", "ingredient") %>
+        <%#= select_tag "title", options_from_collection_for_select(@products, "id", "title") %>
+        <%# select_tag "type_of", options_from_collection_for_select(@types, "id", "type_of"), unique: true %>
+
+        <%#= select_tag "calories",options_from_collection_for_select(@products.includes(:calories), :id, :title) %>
+        <%= submit_tag "Go" %>
+      <% end %>
+
+      <a href="#" class="recent-work" style="border: solid; background :url('<%#=@product[0].image %>') "></a>
+
+      <%#=@product[0].image%>
+
+      </div>
     </div>
   </div>
 </div>

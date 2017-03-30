@@ -14,6 +14,6 @@ ActiveAdmin.register Flavour do
 # end
 
 permit_params do
-  [:flavour]
+  [:flavour, :product_id, :amount_id]
 end
 end

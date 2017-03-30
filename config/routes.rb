@@ -13,6 +13,7 @@ Rails.application.routes.draw do
  end
   resources :passwords_resets, only: [:new, :create, :edit, :update]
 
+  get '/search' => "search#index"
   resources :products
   resources :customers
   resources :sessions, only: [:new, :create, :edit] do

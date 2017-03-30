@@ -27,7 +27,10 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @products = Product.last
+    @products = Product.all
+    @calories = Product.all.pluck(:calories).uniq
+    @ingredients = Ingredient.all.pluck(:ingredient).uniq
+    @types = Type.all.pluck(:type_of).uniq
     # @product = Product.find params[:id]
     # @comment = Comment.new
     # @comments = Comment.where(product_id: @product.id)
@@ -44,22 +47,10 @@ class ProductsController < ApplicationController
   def edit
   end
 
-  def update
-    @product = Product.find params[:id]
-
-    product_params = params.require(:product).permit([:id, :title, :product, :category_id])
-
-    if @product.update product_params
-      redirect_to product_path(@product), notice: 'Product updated!'
-    else
-      render :edit
-    end
+  def updat
   end
 
   def destroy
-      product = Product.find params[:id]
-      product.destroy
-      redirect_to products_path
   end
 
   # def liked_by?(customer)
