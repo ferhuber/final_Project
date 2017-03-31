@@ -57,53 +57,49 @@
 		<div id="second">
 		   <div class="story">
 				 <div class="container">
-		 					<header class="block-heading cleafix">
-								<a href="#" class="recent-work" style="border: solid; background :url('<%=@products[2].image %>') "></a>
-		 						<!--a href="#" class="btn btn-o btn-lg pull-right">View All</a-->
-		 					</header>
-		 					<section class="block-body">
 
-							<div class="row">
+
+							<div class="row ">
+								<div class="block-body col-lg-12">
+									<div class="main-img col-lg-5">
+										<%= image_tag @test[1].image.url(:medium), :class => "test" if @test[1].image.present? %>
+									</div>
+
+									<div class="description col-lg-5">
+										<%= @test[3].description %>
+									</div>
+
+									<div class="col-lg-12">
+
 								<div class="col-sm-3">
-									<a href="#" class="recent-work" style="background-image:url(assets/images/redvelvet.png)">
-									<p class="prod-hover-desc">Red Velvet Cake<br><i class="fa fa-star fa-1x"></i>
-									<i class="fa fa-star fa-1x"></i>
-									<i class="fa fa-star fa-1x"></i>
-									<i class="fa fa-star fa-1x"></i></p>
+										<%= image_tag @test[2].image.url(:large) if @test[2].image.present? %>
+
 									<span class="btn btn-o-white">See More</span>
-									</a>
+
 								</div>
 
 								<div class="col-sm-3">
-									<a href="#" class="recent-work" style="background-image:url(assets/images/raspberry-tarte.png)">
-									<p class="prod-hover-desc">Raspberry Cocoa Tart<br><i class="fa fa-star fa-1x"></i>
-									<i class="fa fa-star fa-1x"></i>
-									<i class="fa fa-star fa-1x"></i>
-									</p>
+									<%= image_tag @test[3].image.url(:large) if @test[3].image.present? %>
+
 									<span class="btn btn-o-white">See More</span>
-									</a>
 								</div>
 
 								<div class="col-sm-3">
-									<a href="#" class="recent-work" style="background-image:url(assets/images/cupcake111.png)"><p class="prod-hover-desc">Coconut Whipping Cupcake<br><i class="fa fa-star fa-1x"></i>
-									<i class="fa fa-star fa-1x"></i>
-									<i class="fa fa-star fa-1x"></i>
-									<i class="fa fa-star fa-1x"></i></p>
+									<%= image_tag @test[0].image.url(:large) if @test[0].image.present? %>
+
 									<span class="btn btn-o-white">See More</span>
-									</a>
+
 								</div>
 
 								<div class="col-sm-3">
-									<a href="#" class="recent-work" style="background-image:url(assets/images/chocolatechipcookie.png)">
-									<p class="prod-hover-desc">Cocoa Chip Cookie<br><i class="fa fa-star fa-1x"></i>
-									<i class="fa fa-star fa-1x"></i>
-									<i class="fa fa-star fa-1x"></i>
-									<i class="fa fa-star fa-1x"></i></p>
+									<%= image_tag @test[0].image.url(:large) if @test[0].image.present? %>
+
 									<span class="btn btn-o-white">See More</span>
-									</a>
-								</div>
 							</div>
-		 				</section>
+
+							</div>
+
+		 				</div>
 		 			</div>
 
 		      <section class="bottom2">

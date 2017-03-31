@@ -1,6 +1,6 @@
 class Ingredient < ApplicationRecord
-  has_many :amounts
 
   include PgSearch
+  has_many :amounts
   multisearchable :against => [:ingredient]
 end

@@ -191,10 +191,7 @@ font-size: 1.2em;
         width: 100%;
 }
 
-.recent-work{
-  background-repeat: no-repeat !important;
-  height: 100px;
-}
+
 
 #third{
         background: image-url('store.jpg') 50% 0 no-repeat fixed;
@@ -332,31 +329,41 @@ font-size: 1.2em;
     .col-sm-3{
   float: left;
   width: 25%;
-  position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  background-color: white !important;
+  height: 30vh;
+  margin: 15px;
   }
 }
 
 .recent-work {
-    width: 100%;
-    padding-bottom: 25%;
+    width: 50%;
+    // height: 100px !important;
+    // padding-bottom: 25%;
     background: #FFFFFF;
-    display: table;
+    display: block;
     text-align: center;
     vertical-align: middle;
-    padding-top: 40%;
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
+    // padding-top: 40%;
     margin-bottom: 30px;
     z-index: 1;
+    background-color: white !important;
 }
 
+.main-img{
+  width: 50%;
+  height: 30vh;
+}
 
+.description{
+  height: 50vh;
+}
 
+.test {
+  width: 50%;
+}
 /////////////// FORMS //////////////////////
 
 .form-template{

@@ -15,7 +15,7 @@
       <%= form_tag "/search", method: :get do %>
 
         Calories:<%= select_tag "calories", options_for_select(@calories) %>
-        Ingredients:<%= select_tag "ingredient", options_for_select(@ingredients) %>
+        Flavours:<%= select_tag "flavour", options_for_select(@flavours) %>
         Type:<%= select_tag "type_of", options_for_select(@types) %>
 
 
@@ -27,9 +27,22 @@
         <%= submit_tag "Go" %>
       <% end %>
 
-      <a href="#" class="recent-work" style="border: solid; background :url('<%#=@product[0].image %>') "></a>
+      <a href="#" class="recent-work" style="border: solid; background :url('<%=@products[0].image %>') "></a>
 
-      <%=@product%>
+      <% if  @product.present?%>
+      <%= image_tag @product[0].image %>
+
+
+      <%= @product.length %>
+      <%#= @product_f.length %>
+      <%#= @product_t.length %>
+
+      <%#= image_tag @product_f[0].image %>
+      <% else %>
+      <p>Search not match</p>
+
+
+      <% end %>
 
       </div>
     </div>

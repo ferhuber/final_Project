@@ -28,18 +28,17 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.order(created_at: :desc)
+    @test = Product.all
   end
 
   def show
     @products = Product.all
     @calories = Product.all.pluck(:calories).uniq
-    @ingredients = Ingredient.all.pluck(:ingredient).uniq
+    @flavours = Flavour.all.pluck(:flavour).uniq
     @types = Type.all.pluck(:type_of).uniq
-    # @product = Product.find params[:id]
-    # @comment = Comment.new
-    # @comments = Comment.where(product_id: @product.id)
-    # @customer = @product.customer
-    # @category = Category.find(@product.category_id)
+
+    @test = PgSearch.multisearch(params[:ingredient])
+
   end
 
   def destroy
