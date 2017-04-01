@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
 
   include PgSearch
-  pg_search_scope :search_by_title, :against => :title
+  # pg_search_scope :search_by_title, :against => :title
 
   mount_uploader :image, ImageUploader
 

@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   resources :passwords_resets, only: [:new, :create, :edit, :update]
 
   get '/search' => "search#index"
-  resources :products
+  resources :products do
+    resources :flavours, only: [:create, :destroy]
+    end
+
+
   resources :customers
   resources :sessions, only: [:new, :create, :edit] do
     delete :destroy, on: :collection

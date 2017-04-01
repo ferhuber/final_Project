@@ -13,7 +13,7 @@ ActiveAdmin.register Product do
 #   permitted
 # end
 permit_params do
-  [:title, :description, :calories,:image]
+  [:title, :description, :calories, :image]
 end
 
 end

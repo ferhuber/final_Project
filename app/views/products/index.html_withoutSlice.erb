@@ -57,146 +57,48 @@
 		<div id="second">
 		   <div class="story">
 				 <div class="container">
-					 <%#= @products.length %>
-					 <%#= image_tag @products[6].id %>
 
-					 <div class="search-products col-lg-12">
-
-						 <%= form_tag "/search", method: :get do %>
-
-						 Calories:<%= select_tag "calories", options_for_select(@calories) %>
-						 Flavours:<%= select_tag "flavour", options_for_select(@flavours) %>
-						 Type:<%= select_tag "type_of", options_for_select(@types) %>
-
-
-						 <%#= select_tag "ingredient", options_from_collection_for_select(@ingredients, "id", "ingredient") %>
-						 <%#= select_tag "title", options_from_collection_for_select(@products, "id", "title") %>
-						 <%# select_tag "type_of", options_from_collection_for_select(@types, "id", "type_of"), unique: true %>
-
-						 <%#= select_tag "calories",options_from_collection_for_select(@products.includes(:calories), :id, :title) %>
-						 <%= submit_tag "Go" %>
-						 <% end %>
-
-					 </div>
 							<div class="row ">
-
 								<div class="block-body col-lg-12">
-									<div id="slider">
-									  <a href="#" class="control_next">>></a>
-									  <a href="#" class="control_prev"><</a>
-									  <ul>
-											<% @products.each do |p| %>
-											  <li><%= image_tag p.image.url(:large), :class => "products-img" %></li>
-
-												<% end %>
-
-										</ul>
+									<div class="main-img col-lg-5">
+										<%= image_tag @products[2].image.url(:medium), :class => "products" if @products[2].image.present? %>
 									</div>
 
-									<div class="slider_option">
-
-									  <input type="checkbox" id="checkbox">
-									  <label for="checkbox">Autoplay Slider</label>
+									<div class="description col-lg-5">
+										<%= @products[3].description %>
 									</div>
 
+									<div class="col-lg-12">
+
+								<div class="col-sm-3">
+										<%= image_tag @products[2].image.url(:large) if @products[2].image.present? %>
+
+									<span class="btn btn-o-white">See More</span>
+
+								</div>
+
+								<div class="col-sm-3">
+									<%= image_tag @products[3].image.url(:large) if @products[3].image.present? %>
+
+									<span class="btn btn-o-white">See More</span>
+								</div>
+
+								<div class="col-sm-3">
+									<%= image_tag @products[0].image.url(:large) if @products[0].image.present? %>
+
+									<span class="btn btn-o-white">See More</span>
+
+								</div>
+
+								<div class="col-sm-3">
+									<%= image_tag @products[0].image.url(:large) if @products[0].image.present? %>
+
+									<span class="btn btn-o-white">See More</span>
+							</div>
+
+							</div>
 
 		 				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         <div class="order">
-
-						<form id="product-form">
-  						<select id="product-select">
-							  <% @products.each do |p| %>
-								  <option  id="<%= p.id %>"><%= p.title %></option>
-								<% end %>
-							</select>
-							<select id="flavours">
-							</select>
-							<select id="types">
-							</select>
-
-
-							<!-- <input id="product-button"><i class="fa fa-plus-circle fa-2x" ></i> -->
-							<input type="submit" name="" value="Add Product" id="product-button" ></input>
-						</form>
-
-						<div class="list-order">
-
-						</div>
-					</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		 			</div>
 
 		      <section class="bottom2">
@@ -234,10 +136,3 @@
 		 </div>
    </div>
 </div>
-
-<script>
-
-
-
-
-</script>

@@ -43,8 +43,90 @@
 
 
       <% end %>
+    </div>
+    <hr>
 
-      </div>
+    <form class="form-inline" role="form">
+
+      <div class="form-group">
+                            Sugar, I'd like to make a
+          <select name="event-type" class="form-control form-control-white">
+                            <option value="EVENT TYPE">Event Type</option>
+                            <option value="saab">Wedding</option>
+                            <option value="fiat">Workshop</option>
+                            <option value="audi">Birthday Party</option>
+                            </select></div>
+                            <div class="form-group">
+                            for
+                            <input type="number" class="form-control form-control-white" name="quantity" min="1" max="80" placeholder="0" required>
+        </div>
+
+        <div class="form-group">
+                            people, on
+          <input type="month" class="form-control form-control-white" name="month" required>
+        </div>
+                            ,
+                            <input type="number" class="form-control form-control-white" name="quantity" min="1" max="30" placeholder="0" required><br>
+                            I'd like to have my order ready to take at
+                            <input type="time" class="form-control form-control-white" name="usr_time" placeholder="0" required>
+        <div class="form-group">
+                            <label for="event">at</label>
+          <select name="event-type" class="form-control form-control-white">
+                            <option value="EVENT TYPE">Pick out a store location</option>
+                            <option value="saab">Burnaby</option>
+                            <option value="fiat">Downtown</option>
+                            <option value="audi">North Vancouver</option>
+                            </select>
+                        </div>
+
+                        <br><br>
+                        <div class="product-quote col-sm-12">
+                            <div class="form-group">
+                            PRODUCTS:
+          <select name="event-type" class="form-control form-control-white">
+                            <option value="product">Product</option>
+                            <option value="cake">Cake</option>
+                            <option value="bread">Bread</option>
+                            <option value="pastry">Pastry</option>
+                            <option value="pastry">    Deserts    </option>
+                                <option value="pastry">    Catering    </option>
+                            </select>
+
+        </div>
+                            <div class="form-group">
+          <select name="event-type" class="form-control form-control-white">
+                            <option value="TYPE">Type</option>
+                            <option value="saab">Simple</option>
+                            <option value="fiat">Party Cake</option>
+                            <option value="audi">Wedding cake</option>
+                                <option value="audi">Filled cake</option>
+                            </select>
+        </div>
+                            <div class="form-group">
+          <select name="event-type" class="form-control form-control-white">
+                            <option value="EVENT TYPE">Options</option>
+
+                            </select>
+        </div>
+                            <div class="form-group">
+          <select name="event-type" class="form-control form-control-white">
+                            <option value="quantity">Quantity</option>
+                            <option value="saab">Enough to my invitees</option>
+                              <option value="fiat">1kg</option>
+
+                            </select>
+        </div>
+                            <div class="col-sm-1 pull-right">
+                           <i class="fa fa-plus-circle fa-2x"></i>
+                                </div>
+
+                        </div>
+      <input type="submit" class="btn btn-o-white" value="SUBMIT">
+    </form>
+
+
+
+
     </div>
   </div>
 </div>

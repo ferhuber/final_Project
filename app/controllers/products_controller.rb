@@ -5,12 +5,11 @@ class ProductsController < ApplicationController
   #
   # before_action :authorize, only: [:edit, :destroy, :update]
 
-
-
-
-
   def new
     @product  = Product.new
+    @calories = Product.all.pluck(:calories).uniq
+    @titles = Product.all.pluck(:title).uniq
+    @flavours = Flavour.all.pluck(:flavour).uniq
 
   end
 
@@ -27,18 +26,29 @@ class ProductsController < ApplicationController
   end
 
   def index
+    @images = Product.all
     @products = Product.order(created_at: :desc)
-    @test = Product.all
-  end
-
-  def show
-    @products = Product.all
     @calories = Product.all.pluck(:calories).uniq
     @flavours = Flavour.all.pluck(:flavour).uniq
     @types = Type.all.pluck(:type_of).uniq
+  end
 
-    @test = PgSearch.multisearch(params[:ingredient])
+  def show
+    # @products = Product.all
+    # @calories = Product.all.pluck(:calories).uniq
+    # @flavours = Flavour.all.pluck(:flavour).uniq
+    # @types = Type.all.pluck(:type_of).uniq
 
+    # @test = Product.all
+
+    @product = Product.find params[:id]
+    @flavours = @product.flavours
+    @types = @product.types
+
+    respond_to do |format|
+     format.html { render } # might need to specify the view
+     format.json { render json: {product: @product, flavours: @flavours, types: @types} }
+    end
   end
 
   def destroy
@@ -65,12 +75,16 @@ class ProductsController < ApplicationController
   # end
 
 
+  def products_params
+  params.require(:product).permit(:flavours, flavours_attributes: [:id, :flavour])
+  end
+
 
 
   private
 
   def find_product
-    @product = Product.find(params[:id])
+    @test = Product.find(params[:id])
   end
 
   # def find_comment

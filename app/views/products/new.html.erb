@@ -2,15 +2,34 @@
   <div class="row">
     <div class="  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
 
-        <h1>new products</h1>
-        <%=simple_form_for @product do |f| %>
-        <%= f.input :title %>
-        <%= f.input :description %>
-        <%= f.input :calories %>
-        <%= f.input :image %>
-        <%= f.submit 'Save', class: 'btn btn-primary' %>
-        <% end %>
+      <h1>new products</h1>
+      <%=simple_form_for @product do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :calories  %>
+      <%= f.input :image %>
+      <%= f.submit 'Save', class: 'btn btn-primary' %>
+      <% end %>
 
     </div>
   </div>
+</div>
+
+
+
+<div class="form-template col-lg-12">
+  <h1>Order</h1>
+  <%=simple_form_for @product do |p| %>
+  <div class="form-tags col-lg-3">
+    <%= p.input :title, collection: @titles, prompt: "Candies",:label => false %>
+  </div>
+
+  <%= p.submit 'Submit Order', class: 'btn btn-primary' %>
+  <% end %>
+
+</div>
+
+
+
+
 </div>

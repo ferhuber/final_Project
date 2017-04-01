@@ -23,7 +23,6 @@ class SearchController < ApplicationController
     # @product = Product.where(:calories => params[:calories])
     # @product = Product.includes(:calories => params[:calories])
 
-
 #  p = products_with_flavours_and_types.where("calories < 1000")
 # products_with_flavours_and_types = Product.joins(:flavours).joins(:types).where("calories < 1000")
 # product_with_vanilla_bean = products_with_flavours_and_types.select{|p| p.flavours.select{|f| f.flavour.downcase == "vanilla bean"}}
