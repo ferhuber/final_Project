@@ -16,9 +16,6 @@
 						<a href="#second">OUR PRODUCTS</a>
 					</li>
 					<li>
-						<a href="#third">ORDERING</a>
-					</li>
-					<li>
 						<a href="#fourth">ABOUT US</a>
 					</li>
 				</ul>
@@ -35,7 +32,7 @@
 				<ul>
 					<li><a href=""><i class="fa fa-facebook-square fa-3x"></i></a></li>
           <li><a href=""><i class="fa fa-youtube-square fa-3x"></i></a></li>
-          <li><a href=""><i class="fa fa-instagram-square fa-3x"></i></a></li>
+          <li><a href=""><i class="fa fa-instagram fa-3x"></i></a></li>
 					<li><a href=""><i class="fa fa-twitter-square fa-3x"></i></a></li>
 				</ul>
 			</div>
@@ -52,149 +49,53 @@
 					 </div>
 				 </section>
 			 </div>
+			 <!-- <section class="bottom col-lg-offset-5 col-lg-2">
+					<a id="scrollToContent" href="#second"> OUR PRODUCTS <br>
+						<%= image_tag("arrow_down.png", :class => "arrow")%>
+					</a>
+				</section> -->
 		</div>
 
 		<div id="second">
 		   <div class="story">
-				 <div class="container">
-					 <%#= @products.length %>
-					 <%#= image_tag @products[6].id %>
-
-					 <div class="search-products col-lg-12">
-
-						 <%= form_tag "/search", method: :get do %>
-
-						 Calories:<%= select_tag "calories", options_for_select(@calories) %>
-						 Flavours:<%= select_tag "flavour", options_for_select(@flavours) %>
-						 Type:<%= select_tag "type_of", options_for_select(@types) %>
-
-
-						 <%#= select_tag "ingredient", options_from_collection_for_select(@ingredients, "id", "ingredient") %>
-						 <%#= select_tag "title", options_from_collection_for_select(@products, "id", "title") %>
-						 <%# select_tag "type_of", options_from_collection_for_select(@types, "id", "type_of"), unique: true %>
-
-						 <%#= select_tag "calories",options_from_collection_for_select(@products.includes(:calories), :id, :title) %>
-						 <%= submit_tag "Go" %>
-						 <% end %>
-
-					 </div>
+				 <div class="container col-lg-12">
 							<div class="row ">
-
 								<div class="block-body col-lg-12">
-									<div id="slider">
-									  <a href="#" class="control_next">>></a>
-									  <a href="#" class="control_prev"><</a>
+
+									<div class="the-menu col-lg-offset-3 col-lg-6">
+											<span>the menu</span>
+											<a href="/products/show">
+											<p><button type="button" name="button">SEE</button></p>
+										</a>
+									</div>
+
+									<div id="slider" >
 									  <ul>
-											<% @products.each do |p| %>
-											  <li><%= image_tag p.image.url(:large), :class => "products-img" %></li>
-
-												<% end %>
-
+											  <li><%= image_tag("home/banner1.jpg", :class => "img-home")%></li>
+												<li><%= image_tag("home/banner2.jpg", :class => "img-home")%></li>
+												<li><%= image_tag("home/banner3.jpg", :class => "img-home")%></li>
 										</ul>
 									</div>
-
-									<div class="slider_option">
-
-									  <input type="checkbox" id="checkbox">
-									  <label for="checkbox">Autoplay Slider</label>
-									</div>
-
-
 		 				</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         <div class="order">
-
-						<form id="product-form">
-  						<select id="product-select">
-							  <% @products.each do |p| %>
-								  <option  id="<%= p.id %>"><%= p.title %></option>
-								<% end %>
-							</select>
-							<select id="flavours">
-							</select>
-							<select id="types">
-							</select>
-
-
-							<!-- <input id="product-button"><i class="fa fa-plus-circle fa-2x" ></i> -->
-							<input type="submit" name="" value="Add Product" id="product-button" ></input>
-						</form>
-
-						<div class="list-order">
-
+						<div class="tarteleft">
+							<%= image_tag("home/tarteleft.png", :class => "img-tarte")%>
 						</div>
-					</div>
 
+						<div class="strawberry">
+							<%= image_tag("home/strawberry.png", :class => "img-strawbery")%>
+						</div>
 
+						<div class="tarte">
+							<%= image_tag("home/tarte.png", :class => "img-tarte")%>
+						</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+         <div class="online-order col-lg-offset-2 col-lg-8">
+					 		<p>ONLINE ORDERING IS NOW AVAILABLE</p>
+							<a href="/orders/new">
+							<p><button class="order-button" type="button" name="button">ORDERING</button></p>
+						  </a>
+				</div>
 
 
 		 			</div>
@@ -235,9 +136,5 @@
    </div>
 </div>
 
-<script>
 
-
-
-
-</script>
+<%= render "layouts/footer" %>

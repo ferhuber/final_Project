@@ -1,6 +1,6 @@
 class Flavour < ApplicationRecord
 
-  belongs_to :product
+  has_many :products
   has_many :amounts
   has_many :ingredients, through: :amounts
 

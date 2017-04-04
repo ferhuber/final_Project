@@ -15,7 +15,20 @@
       <p><b>Phone:</b> <%= @customer.phone %></p>
       <p><b>Is_admin:</b> <%= @customer.is_admin %></p>
     <%= link_to 'Logout', logout_path, method: :delete %>
-      <%= link_to 'Change Password',edit_passwords_reset_path %>
+      <%= link_to 'Change Password',edit_passwords_reset_path(@customer.id),{ 'data-toggle' => 'modal', 'data-target' =>'#imageModal'}%>
+
+      <div id="imageModal" class="modal fade modal-style" role="dialog ">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+
+              </div>
+            </div>
+        </div>
+
+
+
 </div>
 </div>
 </div>

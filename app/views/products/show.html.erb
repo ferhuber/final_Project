@@ -1,132 +1,110 @@
-<div class="container-fluid form-template">
-  <div class="row">
-    <div class="  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
+<%= render "layouts/header" %>
+
+<div id="drawer-right" >
+	<div class="cross text-right">
+		<a class="move1" href="#"><i class="fa fa-times-circle fa-2x"></i></a>
+	</div>
+
+			<nav>
+				<ul class="nav nav-pills nav-stacked">
+					<li>
+						<a href="/">HOME</a>
+					</li>
+					<li>
+						<a href="/#second">OUR PRODUCTS</a>
+					</li>
+					<li>
+						<a href="/#fourth">ABOUT US</a>
+					</li>
+				</ul>
+			</nav>
+
+      <div class="phone">
+				<a href=""><i class="fa fa-phone-square fa-2x"></i></a>
+				<p>778 990 6667</p>
+			</div>
+
+			<br>
+
+			<div class="social">
+				<ul>
+					<li><a href=""><i class="fa fa-facebook-square fa-3x"></i></a></li>
+          <li><a href=""><i class="fa fa-youtube-square fa-3x"></i></a></li>
+          <li><a href=""><i class="fa fa-instagram fa-3x"></i></a></li>
+					<li><a href=""><i class="fa fa-twitter-square fa-3x"></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+<div class="container-fluid ">
+  <div class="row product-background">
+    <div class="col-lg-12">
 
 
-      <div class="size" style="width: 200px; font-size: 20px">
 
-      <%#= @products.each do |p| %>
-      <%#= image_tag p.image %>
-      <!-- <p>title:<%#= p.title %></p>
-      <p>desc:<%#= p.description %></p>
-      <p>calories:<%#= p.calories %></p> -->
-      <%# end %>
-
-      <%= form_tag "/search", method: :get do %>
-
-        Calories:<%= select_tag "calories", options_for_select(@calories) %>
-        Flavours:<%= select_tag "flavour", options_for_select(@flavours) %>
-        Type:<%= select_tag "type_of", options_for_select(@types) %>
-
-
-        <%#= select_tag "ingredient", options_from_collection_for_select(@ingredients, "id", "ingredient") %>
-        <%#= select_tag "title", options_from_collection_for_select(@products, "id", "title") %>
-        <%# select_tag "type_of", options_from_collection_for_select(@types, "id", "type_of"), unique: true %>
-
-        <%#= select_tag "calories",options_from_collection_for_select(@products.includes(:calories), :id, :title) %>
-        <%= submit_tag "Go" %>
-      <% end %>
-
-      <a href="#" class="recent-work" style="border: solid; background :url('<%=@products[0].image %>') "></a>
-
-      <% if  @product.present?%>
-      <%= image_tag @product[0].image %>
-
-
-      <%= @product.length %>
-      <%#= @product_f.length %>
-      <%#= @product_t.length %>
-
-      <%#= image_tag @product_f[0].image %>
-      <% else %>
-      <p>Search not match</p>
-
-
-      <% end %>
+  <div class="menu col-lg-12">
+    <div class="pull-right">
+      <p><%= link_to  "< BACK", root_path	 %></p>
     </div>
-    <hr>
-
-    <form class="form-inline" role="form">
-
-      <div class="form-group">
-                            Sugar, I'd like to make a
-          <select name="event-type" class="form-control form-control-white">
-                            <option value="EVENT TYPE">Event Type</option>
-                            <option value="saab">Wedding</option>
-                            <option value="fiat">Workshop</option>
-                            <option value="audi">Birthday Party</option>
-                            </select></div>
-                            <div class="form-group">
-                            for
-                            <input type="number" class="form-control form-control-white" name="quantity" min="1" max="80" placeholder="0" required>
-        </div>
-
-        <div class="form-group">
-                            people, on
-          <input type="month" class="form-control form-control-white" name="month" required>
-        </div>
-                            ,
-                            <input type="number" class="form-control form-control-white" name="quantity" min="1" max="30" placeholder="0" required><br>
-                            I'd like to have my order ready to take at
-                            <input type="time" class="form-control form-control-white" name="usr_time" placeholder="0" required>
-        <div class="form-group">
-                            <label for="event">at</label>
-          <select name="event-type" class="form-control form-control-white">
-                            <option value="EVENT TYPE">Pick out a store location</option>
-                            <option value="saab">Burnaby</option>
-                            <option value="fiat">Downtown</option>
-                            <option value="audi">North Vancouver</option>
-                            </select>
-                        </div>
-
-                        <br><br>
-                        <div class="product-quote col-sm-12">
-                            <div class="form-group">
-                            PRODUCTS:
-          <select name="event-type" class="form-control form-control-white">
-                            <option value="product">Product</option>
-                            <option value="cake">Cake</option>
-                            <option value="bread">Bread</option>
-                            <option value="pastry">Pastry</option>
-                            <option value="pastry">    Deserts    </option>
-                                <option value="pastry">    Catering    </option>
-                            </select>
-
-        </div>
-                            <div class="form-group">
-          <select name="event-type" class="form-control form-control-white">
-                            <option value="TYPE">Type</option>
-                            <option value="saab">Simple</option>
-                            <option value="fiat">Party Cake</option>
-                            <option value="audi">Wedding cake</option>
-                                <option value="audi">Filled cake</option>
-                            </select>
-        </div>
-                            <div class="form-group">
-          <select name="event-type" class="form-control form-control-white">
-                            <option value="EVENT TYPE">Options</option>
-
-                            </select>
-        </div>
-                            <div class="form-group">
-          <select name="event-type" class="form-control form-control-white">
-                            <option value="quantity">Quantity</option>
-                            <option value="saab">Enough to my invitees</option>
-                              <option value="fiat">1kg</option>
-
-                            </select>
-        </div>
-                            <div class="col-sm-1 pull-right">
-                           <i class="fa fa-plus-circle fa-2x"></i>
-                                </div>
-
-                        </div>
-      <input type="submit" class="btn btn-o-white" value="SUBMIT">
-    </form>
-
-
-
-
+    <div class="pull-left">
+      <p>MENU</p>
     </div>
   </div>
+
+<div class="search col-lg-12">
+  <%= form_tag "/search", method: :get do %>
+
+  <%= select_tag "flavour", options_for_select(@flavours),prompt: "Flavours" %>
+    <%= select_tag "calories", options_for_select(@calories), prompt: "Calories" %>
+    <%= select_tag "type_of", options_for_select(@types),prompt: "Types" %>
+
+    <%= submit_tag "Search", class: "search-button" %>
+    <% end %>
+
+  </div>
+  <div class="gallery col-lg-offset-1 col-lg-10 ">
+
+    <% if  @found.present? %>
+
+    <% @found.each do |f| %>
+    <div class="gallery-thumb">
+      <a href="#" class="recent-work" style="background-image:url(<%=  f.image %>)">
+          <p class="prod-hover-desc"><%= f.title %><br><i class="fa fa-star fa-1x"></i>
+          <i class="fa fa-star fa-1x"></i>
+          <i class="fa fa-star fa-1x"></i>
+          <i class="fa fa-star fa-1x"></i></p>
+  				<span class="btn btn-o-white">See More</span>
+  		</a>
+
+    </div>
+    <% end %>
+    <% else %>
+
+      <% @products.each do |p| %>
+      <div class="gallery-thumb">
+        <a href="#" class="recent-work" style="background-image:url(<%=  p.image %>)">
+            <p class="prod-hover-desc"><%= p.title %><br><i class="fa fa-star fa-1x"></i>
+            <i class="fa fa-star fa-1x"></i>
+            <i class="fa fa-star fa-1x"></i>
+            <i class="fa fa-star fa-1x"></i></p>
+    				<span  href="/products/<%= p.id %>/show_image_details" class="btn btn-o-white" data-toggle="modal" data-target="#imageModal">See More</span>
+    		</a>
+      </div>
+
+    <% end %>
+    <% end %>
+  </div>
+
+  <div id="imageModal" class="modal fade modal-style" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+
+          </div>
+        </div>
+    </div>
+
+  </div>
 </div>
+<%= render "layouts/footer" %>

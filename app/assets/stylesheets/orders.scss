@@ -1,0 +1,62 @@
+// Place all the styles related to the orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// .simple_form {
+//   color: black !important;
+// }
+.modal-header, .modal-body {
+  color: black;
+}
+
+.btn-primary{
+  color: #f65a53;
+    background-color: white;
+    border-color: #f65a53;
+}
+.order-background {
+    background-image: url("order/bg-quotation.jpg");
+    height: 99.9vh;
+    background-size: cover;
+}
+
+.order-form{
+
+  background-color: rgba(246, 90, 83, 0.50);
+  margin-top: 20vh;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding: 2%;
+  color: white !important;
+  text-align: center;
+
+}
+
+#event_event_date,
+#event_delivery_date{
+  width: 141px !important;
+  position: relative;
+  border-radius: 30px;
+  color: #f65a53;
+  height: 30px;
+}
+
+#event_number_people{
+  width: 40px;
+  border-radius: 30px;
+  color: #f65a53;
+
+}
+
+
+#event_type_of,
+#order_store{
+  width: 140px;
+  border-radius: 30px;
+  color: #f65a53;
+  height: 30px;
+
+}
+
+.simple_form{
+  color: white !important;
+}

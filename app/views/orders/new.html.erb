@@ -1,0 +1,28 @@
+<%= render "layouts/header" %>
+<div class="container-fluid  ">
+  <div class="row order-background" >
+    <div class=" col-lg-12">
+
+      <div class="order-form">
+
+        <%= simple_form_for @order do |o| %>
+
+        <%= simple_fields_for @event do |e| %>
+
+        Sugar, I'd like to make a <%= e.input_field :type_of , collection: ['Wedding', 'Workshop', 'Birthday Party'], label: false, prompt: 'Event' %>
+        for <%= e.text_field :number_people %> people,
+        on <%= e.date_field :event_date %>
+
+        I'd like to have my order ready to take at   <%= e.date_field :delivery_date,as: :date %>
+        <% end %>
+        at <%= o.input_field :store, collection: ['Burnaby', 'BC'], prompt: 'Store', label: false %>
+
+        <div><%= o.submit class: 'btn btn-primary' %></div>
+        <% end %>
+
+        </div>
+
+    </div>
+  </div>
+</div>
+<%= render "layouts/footer" %>

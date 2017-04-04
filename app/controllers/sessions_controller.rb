@@ -6,6 +6,9 @@ class SessionsController < ApplicationController
     customer = Customer.find_by_email params[:email]
       if customer&.authenticate(params[:password])
         session[:customer_id] = customer.id
+        customer_ip = request.remote_ip
+        # Location.create(ip_address: customer_ip, customer: customer)
+        Location.create(ip_address: "50.64.108.159", customer: customer)
         redirect_to root_path, notice: 'Signed in!'
       else
         flash.now[:error] = 'Wrong credentials'
