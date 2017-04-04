@@ -1,15 +1,110 @@
-<div class="container-fluid form-template">
-  <div class="row">
-    <div class="  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
+<%= render "layouts/header" %>
+
+<div id="drawer-right" >
+	<div class="cross text-right">
+		<a class="move1" href="#"><i class="fa fa-times-circle fa-2x"></i></a>
+	</div>
+
+			<nav>
+				<ul class="nav nav-pills nav-stacked">
+					<li>
+						<a href="/">HOME</a>
+					</li>
+					<li>
+						<a href="/#second">OUR PRODUCTS</a>
+					</li>
+					<li>
+						<a href="/#fourth">ABOUT US</a>
+					</li>
+				</ul>
+			</nav>
+
+      <div class="phone">
+				<a href=""><i class="fa fa-phone-square fa-2x"></i></a>
+				<p>778 990 6667</p>
+			</div>
+
+			<br>
+
+			<div class="social">
+				<ul>
+					<li><a href=""><i class="fa fa-facebook-square fa-3x"></i></a></li>
+          <li><a href=""><i class="fa fa-youtube-square fa-3x"></i></a></li>
+          <li><a href=""><i class="fa fa-instagram fa-3x"></i></a></li>
+					<li><a href=""><i class="fa fa-twitter-square fa-3x"></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+<div class="container-fluid ">
+  <div class="row product-background">
+    <div class="col-lg-12">
 
 
-      <div class="size" style="width: 100px; font-size: 20px">
 
-      <%=image_tag @products.image.url(:medium) if @products.image.present? %>
-      Title:<%= @products.title %>
-      Description:<%= @products.description %>
-      Calories:<%= @products.calories %>
+  <div class="menu col-lg-12">
+    <div class="pull-right">
+      <p><%= link_to  "< BACK", root_path	 %></p>
     </div>
+    <div class="pull-left">
+      <p>MENU</p>
     </div>
   </div>
+
+<div class="search col-lg-12">
+  <%= form_tag "/search", method: :get do %>
+
+  <%= select_tag "flavour", options_for_select(@flavours),prompt: "Flavours" %>
+    <%= select_tag "calories", options_for_select(@calories), prompt: "Calories" %>
+    <%= select_tag "type_of", options_for_select(@types),prompt: "Types" %>
+
+    <%= submit_tag "Search", class: "search-button" %>
+    <% end %>
+
+  </div>
+  <div class="gallery col-lg-offset-1 col-lg-10 ">
+
+    <% if  @found.present? %>
+
+    <% @found.each do |f| %>
+    <div class="gallery-thumb">
+      <a href="#" class="recent-work" style="background-image:url(<%=  f.image %>)">
+          <p class="prod-hover-desc"><%= f.title %><br><i class="fa fa-star fa-1x"></i>
+          <i class="fa fa-star fa-1x"></i>
+          <i class="fa fa-star fa-1x"></i>
+          <i class="fa fa-star fa-1x"></i></p>
+  				<span class="btn btn-o-white">See More</span>
+  		</a>
+
+    </div>
+    <% end %>
+    <% else %>
+
+      <% @products.each do |p| %>
+      <div class="gallery-thumb">
+        <a href="#" class="recent-work" style="background-image:url(<%=  p.image %>)">
+            <p class="prod-hover-desc"><%= p.title %><br><i class="fa fa-star fa-1x"></i>
+            <i class="fa fa-star fa-1x"></i>
+            <i class="fa fa-star fa-1x"></i>
+            <i class="fa fa-star fa-1x"></i></p>
+    				<span  href="/products/<%= p.id %>/show_image_details" class="btn btn-o-white" data-toggle="modal" data-target="#imageModal">See More</span>
+    		</a>
+      </div>
+
+    <% end %>
+    <% end %>
+  </div>
+
+  <div id="imageModal" class="modal fade modal-style" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+
+          </div>
+        </div>
+    </div>
+
+  </div>
 </div>
+<%= render "layouts/footer" %>

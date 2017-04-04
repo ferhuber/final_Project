@@ -1,0 +1,10 @@
+
+
+
+<%= simple_form_for @event do |e| %>
+<%= e.input :type_of%>
+<%= e.number_field :nun_people %>
+<%= e.input :event_date %>
+<%= e.input :delivery_date %>
+<%= e.submit class: 'btn btn-primary' %>
+<% end %>

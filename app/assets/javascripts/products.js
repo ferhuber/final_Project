@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-
-
   $wrapper = $('#wrapper');
   $drawerRight = $('#drawer-right');
 
@@ -52,4 +50,79 @@ $(document).ready(function(){
         $( ".Logo" ).fadeIn( "slow");
 
       }
+});
+
+jQuery(document).ready(function ($) {
+
+  $('#slider').ready(function(){
+    setInterval(function () {
+        moveRight();
+    }, 6000);
+  });
+
+	var slideCount = $('#slider ul li').length;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+
+	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    // function moveLeft() {
+    //     $('#slider ul').animate({
+    //         left: + slideWidth
+    //     }, 300, function () {
+    //         $('#slider ul li:last-child').prependTo('#slider ul');
+    //         $('#slider ul').css('left', '');
+    //     });
+    // };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 2000, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    // $('a.control_prev').click(function (e) {
+    //   e.preventDefault();
+    //     moveLeft();
+    // });
+    //
+    // $('a.control_next').click(function (e) {
+    //   e.preventDefault();
+    //     moveRight();
+    // });
+
+
+
+    $('#product-select').on('change',function() {
+      const prodID = ($('#product-select option:selected').attr('id'));
+      const url = 'http://localhost:3000/products/' + prodID + '.json';
+      $.get(url, function(data) {
+
+        data.flavours.forEach( function(flavour) {
+          let flav = '<option>' + flavour.flavour + '</option>';
+          $('#flavours').show();
+          $('#flavours').append(flav);
+        });
+
+        data.types.forEach( function(type) {
+          let typ = '<option>' + type.type_of + '</option>';
+          $('#types').show();
+          $('#types').append(typ);
+        })
+      })
+    });
+    $("#product-form").submit(function(event){
+      event.preventDefault();
+      $(".list-order").append($(`<div class="test">${event.target[0].value}</div>`))
+
+    });
+
 });

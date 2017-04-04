@@ -1,0 +1,219 @@
+body {
+    color: #f16169;
+    background: #f16169;
+    background: -webkit-linear-gradient(#f16169, #ff7555, #ff5572);
+    background: -o-linear-gradient(#f16169, #ff7555, #ff5572);
+    background: -moz-linear-gradient(#f16169, #ff7555, #ff5572);
+    background: linear-gradient(#f16169, #ff7555, #ff5572);
+    margin: 0;
+    min-width: 980px;
+    padding: 0;
+}
+
+
+
+.order{
+  border: 1.5px solid #ffffff;
+  height: 31vh;
+  padding: 50px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 5vh;
+
+}
+
+.bottom {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 300px;
+
+}
+
+.bottom a {
+    opacity: 0.7;
+
+}
+
+.bottom a:hover {
+    opacity: 1;
+}
+
+.bottom #scrollToContent {
+    color: #ffffff;
+    font-size: 1em;
+    font-family: "Quicksand";
+    text-decoration: none;
+}
+
+.arrow{
+  width: 30px;
+}
+
+.the-menu {
+  font-size: 30px;
+  font-family: "Quicksand";
+  color: #f65a53;
+  text-transform: uppercase;
+  line-height: 1.2;
+  position: absolute;
+  margin-top: 22vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 499;
+  height: 20vh;
+  text-align: center;
+  padding: 50px;
+}
+
+
+.online-order {
+
+  font-size: 2.25em;
+  margin-bottom: 15px;
+  margin-top: 10vh;
+  line-height: 1em;
+  font-family: 'Quicksand';
+  color: white;
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  width: 80%;
+  padding: 40px;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 300;
+}
+
+
+.tarteleft {
+  position: absolute;
+  left: 15px;
+  top: 50vh;
+  z-index: 299;
+}
+
+.img-tarte{
+  width: 80%;
+  margin-top: 3vh;
+}
+
+.strawberry {
+  position: absolute;
+  top: 48vh;
+  z-index: 301;
+  margin-left: 93%;
+}
+
+.img-strawbery {
+
+  width: 70%;
+
+}
+
+.tarte {
+  position: absolute;
+  top: 73vh;
+  z-index: 301;
+  margin-left: 86%;
+}
+
+.img-tarte {
+
+  width: 60%;
+
+}
+
+button{
+  color: #f65a53;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: none;
+  font-size: 0.5em;
+  font-weight: normal;
+  border: solid 1px #f65a53;
+  width:100px;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+button:not(.disabled):hover {
+  background-image: none;
+  background-color: white;
+}
+
+button a:hover{
+  color: #f65a53;
+  // background-color: white !important;
+  background-image: white;
+  border-color: #f65a53;
+  font-size: 0.5em;
+  font-weight: normal;
+}
+
+.order-button{
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.order-button:hover{
+  background-color: red !important;
+}
+
+
+////////////////////slider//////////////////////
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+html {
+  border-top: 5px solid #fff;
+  color: #2a2a2a;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 80px auto 0 -20px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 2000px;
+  // width: 1366px;
+  height: 443px;
+  background: white;
+  text-align: center;
+  line-height: 300px;
+}
+
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+.products-img{
+  width: 100%;
+  height: 100%
+}

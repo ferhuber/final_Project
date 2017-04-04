@@ -1,0 +1,44 @@
+<%= render "layouts/header" %>
+<div class="container-fluid  ">
+  <div class="row order-background" >
+    <div class=" col-lg-12">
+      <div class="order-form">
+
+        Sugar, I'd like to make a <%= @order.event.type_of %>
+        for <%= @order.event.number_people %> people,
+        on <%= @order.event.event_date %>
+        <br>
+        I'd like to have my order ready to take at   <%= @order.event.delivery_date %>
+
+        at <%= @order.store %>
+
+
+        <div class="products-form">
+
+          <%= simple_form_for [@order, @production] do |p| %>
+
+          Qty: <%= p.text_field :quantity %>
+          <%= select_tag "products", options_for_select(@products_t), prompt: "Candies" %>
+          <%= p.button :submit, 'Add Candies', class: 'btn btn-primary'  %>
+          <% end %>
+
+        <div class="test-production">
+
+            <% @order.productions.each do |p| %>
+            <div class="products-order pull-left ">
+              <%= p.quantity %>
+               - <%= p.product.title %>
+            </div>
+              <% end %>
+        </div>
+
+          <%= link_to 'Submit Order', order_submit_path(@order) %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%= render "layouts/footer" %>

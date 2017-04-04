@@ -13,7 +13,7 @@ ActiveAdmin.register Type do
 #   permitted
 # end
 permit_params do
-  [:type]
+  [:type_of , :product_id]
 end
 
 end

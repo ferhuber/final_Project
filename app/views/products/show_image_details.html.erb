@@ -1,0 +1,21 @@
+<div class="modal-back">
+
+<div class="modal-header">
+  <h4 class="modal-title"><%= @product.title %></h4>
+  <p>Calories: <%= @product.calories %></p>
+</div>
+<div class="modal-body">
+    <div class = "field form-group ">
+      <p><%= @product.description %></p>
+    </div>
+  <% if flash[:modal] %>
+  <script type="text/javascript">
+  $("#imageModal").modal()
+  </script>
+  <% end %>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn-primary" data-dismiss="modal">Close</button>
+</div>
+
+</div>

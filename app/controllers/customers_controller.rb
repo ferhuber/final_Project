@@ -27,9 +27,6 @@ class CustomersController < ApplicationController
 
   def show
     @customer = Customer.find session[:customer_id]
-    # @customers = Customer.all
-    # @products_count = Post.count
-    # @customer_count     = Customer.count
   end
 
   def edit
@@ -70,6 +67,5 @@ class CustomersController < ApplicationController
       flash[:modal] = true
       render :edit
     end
-
   end
 end

@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170329233722) do
+ActiveRecord::Schema.define(version: 20170404042440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "fuzzystrmatch"
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -73,18 +74,55 @@ ActiveRecord::Schema.define(version: 20170329233722) do
     t.boolean  "activated",         default: false
     t.datetime "activated_at"
     t.string   "remember_digest"
+    t.float    "longitude"
+    t.float    "latitude"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "type_of"
+    t.integer  "number_people"
+    t.date     "event_date"
+    t.date     "delivery_date"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "flavours", force: :cascade do |t|
     t.string   "flavour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "product_id"
+    t.integer  "amount_id"
+    t.index ["amount_id"], name: "index_flavours_on_amount_id", using: :btree
+    t.index ["product_id"], name: "index_flavours_on_product_id", using: :btree
   end
 
   create_table "ingredients", force: :cascade do |t|
     t.string   "ingredient"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "store"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "production_id"
+    t.integer  "customer_id"
+    t.integer  "event_id"
+    t.index ["customer_id"], name: "index_orders_on_customer_id", using: :btree
+    t.index ["event_id"], name: "index_orders_on_event_id", using: :btree
+    t.index ["production_id"], name: "index_orders_on_production_id", using: :btree
+  end
+
+  create_table "productions", force: :cascade do |t|
+    t.integer  "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "product_id"
+    t.integer  "order_id"
+    t.index ["order_id"], name: "index_productions_on_order_id", using: :btree
+    t.index ["product_id"], name: "index_productions_on_product_id", using: :btree
   end
 
   create_table "products", force: :cascade do |t|
@@ -106,5 +144,12 @@ ActiveRecord::Schema.define(version: 20170329233722) do
 
   add_foreign_key "amounts", "flavours"
   add_foreign_key "amounts", "ingredients"
+  add_foreign_key "flavours", "amounts"
+  add_foreign_key "flavours", "products"
+  add_foreign_key "orders", "customers"
+  add_foreign_key "orders", "events"
+  add_foreign_key "orders", "productions"
+  add_foreign_key "productions", "orders"
+  add_foreign_key "productions", "products"
   add_foreign_key "types", "products"
 end

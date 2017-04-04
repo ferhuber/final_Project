@@ -1,3 +1,6 @@
 class Ingredient < ApplicationRecord
-  has_many :amounts
+
+
+  has_many :amount
+
 end

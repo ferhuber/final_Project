@@ -2,6 +2,11 @@ class Customer < ApplicationRecord
     attr_accessor :remember_token, :activation_token, :reset_token
     has_secure_password
 
+    has_many :orders
+
+    geocoded_by :address
+    after_validation :geocode
+
 
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
     validates :first_name, presence: true

@@ -1,0 +1,30 @@
+.menu{
+  color: white;
+  background-color: rgba(158, 158, 158, 0.24);
+  margin-bottom: 20px;
+  padding-top: 10px;
+  height: 4vh;
+  margin-top: 16vh;
+}
+.pull-right a{
+  text-decoration: none !important;
+  color: white;
+
+}
+
+.search{
+  background-color: rgba(241, 97, 105, 0.52);
+  width: 100%;
+  height: 4vh;
+  padding-top: 5px;
+}
+
+.search-button{
+  // color: white;
+  background-color: white !important;
+}
+
+.search-button a:hover{
+  // color: white;
+  background-color: rgba(241, 97, 105, 0.17) !important;
+}
