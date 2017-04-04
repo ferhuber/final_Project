@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+    <a href="/">Home</a>|
+
+    <% if user_signed_in? %>
+      <%= link_to  current_user.full_name, user_path(current_user.id) %> |
+      <%= link_to 'Sign Out', sessions_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Sign Up', new_user_path %> |
+      <%= link_to 'Sign In', new_session_path %>
+    <% end %>
+    <hr>
+    <%= notice || alert %>
+    <div class='container'>
+    <%= yield %>
+    </div>
+  </body>
+</html>

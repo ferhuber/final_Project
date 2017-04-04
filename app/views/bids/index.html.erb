@@ -1,0 +1,6 @@
+<h1>Bids!!</h1>
+
+<%= simple_form_for [@auction, @bid], remote: true do |f| %>
+  <%= f.input :price, label: false %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

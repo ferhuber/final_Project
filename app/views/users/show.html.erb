@@ -1,0 +1,6 @@
+<h3>User bids:</h3>
+
+
+<% @auctions.each do |a| %>
+<li><%= link_to a.title, auction_path(a.id)%></li>
+<% end %>

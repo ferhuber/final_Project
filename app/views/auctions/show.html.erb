@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="left col-lg-5">
+      <h4><%= @auction.title %></h4>
+      <p><%= @auction.details %></p>
+
+        <%= simple_form_for [@auction, @bid] do |f| %>
+          <%= f.input :bid , input_html: {value: @auction.reserve_price}%>
+          <%= f.submit 'Bid' , class: 'btn btn-primary'%>
+        <% end %>
+        <hr>
+        <% if @bids.count > 0 %>
+          <h4>Previous Bids</h4>
+          <% @bids.latest_first.each do |b|%>
+            <p>
+            <%= number_to_currency(b.bid)%> at
+            <%= b.updated_at.strftime("%b %d %Y") %> by
+            <%= b.user.full_name %>
+
+            </p>
+          <% end %>
+      </div>
+
+      <b>Actual State: </b>
+      <%= @auction.aasm_state%>  <%= link_to 'Edit' , edit_auction_path, class: 'btn btn-primary' %>
+      <br>
+      <b>End Auction: </b>
+      <%= @auction.end_date.strftime("%b %d %Y %H:%M ") %>
+      <br>
+      <b>Current Price: </b>
+      <%= number_to_currency(@bids.maximum("@bids.bid") )%>
+
+  <% end %>
+
+  </div>
+</div>

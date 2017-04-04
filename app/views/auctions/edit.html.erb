@@ -1,0 +1,12 @@
+<%= @auction.errors.full_messages.join(', ') %>
+<%= simple_form_for @auction do |f| %>
+  <%= f.input :title %>
+  <%= f.input :details %>
+  <%= f.input :end_date %>
+  <%= f.input :reserve_price %>
+  <%= f.input :aasm_state, collection: [ "published", "draft", "canceled", "opened"] %>
+<br>
+
+<br>
+<%= f.submit 'Save', class: 'btn btn-primary' %>
+<% end %>
