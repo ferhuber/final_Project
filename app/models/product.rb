@@ -6,8 +6,8 @@ class Product < ApplicationRecord
   has_many :productions
   has_many :types
   has_many :flavours
-  has_many :amounts, through: :flavours
-  has_many :orders, through: :products
+  # has_many :amounts, through: :flavours
+  # has_many :orders, through: :products
 
 
 end

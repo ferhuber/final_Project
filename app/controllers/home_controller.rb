@@ -12,6 +12,12 @@ class HomeController < ApplicationController
     @calories = Product.all.pluck(:calories).uniq
     @flavours = Flavour.all.pluck(:flavour).uniq
     @types = Type.all.pluck(:type_of).uniq
+
+      if current_customer.present?
+      @location = current_customer
+      else
+      @location = Location.last
+      end
   end
 
   def show

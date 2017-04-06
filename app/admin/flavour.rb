@@ -13,7 +13,5 @@ ActiveAdmin.register Flavour do
 #   permitted
 # end
 
-permit_params do
-  [:flavour]
-end
+
 end

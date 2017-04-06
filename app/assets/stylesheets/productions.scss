@@ -6,8 +6,9 @@
   color: #f65a53;
   height: 30px;
 }
-.test-production{
+.text-production{
   color: white;
+  // position: absolute;
 }
 
 .order-form{
@@ -35,5 +36,23 @@
   margin-right: 10px;
   padding: 10px;
   width: 250px;
+}
 
+.submit-order{
+  border-radius: 50px;
+  margin-top: 23vh;
+  // position: absolute;
+  // margin-bottom: 20px;
+}
+
+.form-submit-order{
+  position: absolute;
+  height: 0vh;
+    margin-top: 0vh;
+}
+
+.delete{
+  color: white !important;
+  margin-left: 10px;
+  font-size: 0.50em
 }

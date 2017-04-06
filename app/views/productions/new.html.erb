@@ -1,4 +1,5 @@
 <%= render "layouts/header" %>
+<%= render "home/drawer" %>
 <div class="container-fluid  ">
   <div class="row order-background" >
     <div class=" col-lg-12">
@@ -17,22 +18,26 @@
 
           <%= simple_form_for [@order, @production] do |p| %>
 
-          Qty: <%= p.text_field :quantity %>
+          Qty: <%= p.input_field :quantity %>
           <%= select_tag "products", options_for_select(@products_t), prompt: "Candies" %>
           <%= p.button :submit, 'Add Candies', class: 'btn btn-primary'  %>
           <% end %>
 
-        <div class="test-production">
+        <div class="text-production">
 
             <% @order.productions.each do |p| %>
             <div class="products-order pull-left ">
+              <%= p.product.title %>:
               <%= p.quantity %>
-               - <%= p.product.title %>
+               <%= link_to 'Delete',
+               order_production_path(@order, p.id),
+               method: :delete, class: "delete" %>
             </div>
               <% end %>
         </div>
-
-          <%= link_to 'Submit Order', order_submit_path(@order) %>
+<div class="col-lg-5 form-submit-order">
+  <%= link_to 'Submit Order', order_submit_path(@order), class: 'btn btn-primary submit-order' %>
+</div>
 
         </div>
       </div>

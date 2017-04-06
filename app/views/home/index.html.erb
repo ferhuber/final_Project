@@ -2,41 +2,19 @@
 <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> -->
 <%= render "layouts/header" %>
 
-<div id="drawer-right" >
-	<div class="cross text-right">
-		<a class="move1" href="#"><i class="fa fa-times-circle fa-2x"></i></a>
-	</div>
+<div class="container home-body col-lg-12">
 
-			<nav>
-				<ul class="nav nav-pills nav-stacked">
-					<li>
-						<a href="#intro">HOME</a>
-					</li>
-					<li>
-						<a href="#second">OUR PRODUCTS</a>
-					</li>
-					<li>
-						<a href="#fourth">ABOUT US</a>
-					</li>
-				</ul>
-			</nav>
+	<div id="imageModal" class="modal fade modal-style" role="dialog ">
+				<div class="modal-dialog">
 
-      <div class="phone">
-				<a href=""><i class="fa fa-phone-square fa-2x"></i></a>
-				<p>778 990 6667</p>
-			</div>
+					<!-- Modal content-->
+					<div class="modal-content">
 
-			<br>
-
-			<div class="social">
-				<ul>
-					<li><a href=""><i class="fa fa-facebook-square fa-3x"></i></a></li>
-          <li><a href=""><i class="fa fa-youtube-square fa-3x"></i></a></li>
-          <li><a href=""><i class="fa fa-instagram fa-3x"></i></a></li>
-					<li><a href=""><i class="fa fa-twitter-square fa-3x"></i></a></li>
-				</ul>
-			</div>
+					</div>
+				</div>
 		</div>
+
+<%= render "home/drawer" %>
 
 		<div id="intro">
 		   <div class="story">
@@ -79,7 +57,7 @@
 		 				</div>
 
 						<div class="tarteleft">
-							<%= image_tag("home/tarteleft.png", :class => "img-tarte")%>
+							<%= image_tag("home/tarteleft.png", :class => "img-tarteleft")%>
 						</div>
 
 						<div class="strawberry">
@@ -93,7 +71,7 @@
          <div class="online-order col-lg-offset-2 col-lg-8">
 					 		<p>ONLINE ORDERING IS NOW AVAILABLE</p>
 							<a href="/orders/new">
-							<p><button class="order-button" type="button" name="button">ORDERING</button></p>
+							<p><button class="order-button" type="button" name="button">GO</button></p>
 						  </a>
 				</div>
 
@@ -128,6 +106,71 @@
 
 <div id="fourth">
    <div class="story4">
+		 <div class="content-block  " >
+			 <% if customer_signed_in? %>
+			 <div class="maps col-lg-offset-1 col-lg-10">
+				 <div class="col-lg-3 ">
+					 <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&origin=49.2400367,-122.9931887&destination=codecore+Vancouver,BC width="25px" height="220px""  ></iframe>
+
+				 </div>
+
+					<div class="content-store col-lg-3">
+						<h4>Sugar Bakery Downtown</h4>
+						<p>1633 Bakery Street</p>
+						<p>Vancouver, British Columbia, Canada</p>
+						<p><i class="fa fa-phone-square fa-1x"></i> 778 990 7634</p>
+					</div>
+
+					<div class="col-lg-3">
+ 					 <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&origin=49.2400367,-122.9931887&destination=BCIT+Burnaby,BC width="25px" height="220px"" ></iframe>
+
+ 				 </div>
+
+ 					<div class="content-store col-lg-3">
+						<h4>Sugar Bakery Burnaby</h4>
+						<p>1234 Sugar Street</p>
+						<p>Burnaby, British Columbia, Canada</p>
+						<p><i class="fa fa-phone-square fa-1x"></i> 778 990 6667</p>
+
+						</div>
+					</div>
+					<% else %>
+					<div class="maps col-lg-offset-1 col-lg-10">
+	 				 <div class="col-lg-3 ">
+						 <iframe src="  https://www.google.com/maps/embed/v1/place?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&q=CodeCore,+Vancouver,+BC&attribution_source=Google+Maps+Embed+API&attribution_ios_deep_link_id=comgooglemaps://?daddr=CodeCore,+Vancouver,+BC
+						 " width="25px" height="220px"></iframe>
+	 				 </div>
+
+	 					<div class="content-store col-lg-3">
+	 						<h4>Sugar Bakery Downtown</h4>
+	 						<p>1633 Bakery Street</p>
+	 						<p>Vancouver, British Columbia, Canada</p>
+	 						<p><i class="fa fa-phone-square fa-1x"></i> 778 990 7634</p>
+	 					</div>
+
+	 					<div class="col-lg-3">
+							<iframe src="  https://www.google.com/maps/embed/v1/place?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&q=CodeCore,+Vancouver,+BC&attribution_source=Google+Maps+Embed+API&attribution_ios_deep_link_id=comgooglemaps://?daddr=CodeCore,+Vancouver,+BC
+							" width="25px" height="220px"></iframe>
+	  				 </div>
+
+	  					<div class="content-store col-lg-3">
+	 						<h4>Sugar Bakery Burnaby</h4>
+	 						<p>1234 Sugar Street</p>
+	 						<p>Burnaby, British Columbia, Canada</p>
+	 						<p><i class="fa fa-phone-square fa-1x"></i> 778 990 6667</p>
+
+	 						</div>
+	 					</div>
+
+					<% end %>
+
+				 </div>
+		 </div>
+   </div>
+</div>
+
+<div id="fifth">
+   <div class="story5">
 		 <div class="content-block " >
 			 <div class="container text-center">
 				 <h1><i>"Life is short, eat dessert first"</i></h1>
@@ -138,3 +181,4 @@
 
 
 <%= render "layouts/footer" %>
+</div>

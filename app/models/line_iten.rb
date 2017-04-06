@@ -1,2 +1,0 @@
-class LineIten < ApplicationRecord
-end

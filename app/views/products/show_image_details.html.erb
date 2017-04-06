@@ -4,8 +4,11 @@
   <h4 class="modal-title"><%= @product.title %></h4>
   <p>Calories: <%= @product.calories %></p>
 </div>
-<div class="modal-body">
-    <div class = "field form-group ">
+<div class="modal-body col-md-12 ">
+  <div class="picture-modal col-md-6">
+    <%= image_tag @product.image.url(:large) if @product.image.present? %>
+  </div>
+    <div class = "field form-group col-md-5">
       <p><%= @product.description %></p>
     </div>
   <% if flash[:modal] %>

@@ -1,40 +1,41 @@
 <div class="container-fluid form-template">
   <div class="row">
-    <div class="  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
+    <%= link_to 'X',  root_path, class: "pull-right back-cust"%>
+    <div class="sessions  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-42 col-lg-9 col-lg-offset-2">
 
+<br><br>
     <h2>Sign Up</h2>
     <%= @customer.errors.full_messages.join(', ') %>
-
-    <%= form_for @customer do |f| %>
+    <%= simple_form_for @customer do |f| %>
     <div>
-      <%= f.label :first_name %>
+      <p>First Name:</p>
       <%= f.text_field :first_name %>
     </div>
     <div>
-      <%= f.label :last_name %>
+      <p>Last Name:</p>
       <%= f.text_field :last_name %>
     </div>
     <div>
-      <%= f.label :email %>
+      <p>E-mail:</p>
       <%= f.email_field :email %>
     </div>
     <div>
-      <%= f.label :phone %>
+      <p>Phone</p>
       <%= f.text_field :phone %>
     </div>
     <div>
-      <%= f.label :address %>
+      <p>Address:</p>
       <%= f.text_field :address %>
     </div>
     <div>
-      <%= f.label :password %>
+      <p>PAssword:</p>
       <%= f.password_field :password %>
     </div>
     <div>
-      <%= f.label :password_confirmation %>
+      <p>Confirm Password</p>
       <%= f.password_field :password_confirmation %>
     </div>
-
+<br>
     <div class="button">
       <%= f.submit 'Sign Up' %>
     </div>
@@ -43,6 +44,5 @@
     <% end %>
 
   </div>
-  <%= link_to 'Back',  root_path%>
 </div>
 </div>

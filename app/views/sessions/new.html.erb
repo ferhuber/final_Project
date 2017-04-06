@@ -1,30 +1,28 @@
 <div class="container-fluid form-template">
   <div class="row">
-    <div class="  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
-
-
-        <h1>Sign In</h1>
-
+    <%= link_to 'X',  root_path, class: "pull-right back-cust"%>
+    <div class="sessions  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-4 col-lg-8 col-lg-offset-3">
+        <br>
         <%= form_tag sessions_path do %>
           <div>
-            <%= label_tag :email %>
+            <p>Email:</p>
             <%= email_field_tag :email %>
           </div>
           <div>
-            <%= label_tag :password %>
+          <p>Password:</p>
             <%= password_field_tag :password %>
           </div>
+          <%= link_to 'Forgot password?', new_passwords_reset_path %>
+          <br>          <br>
 
           <div class="button">
             <%= submit_tag 'Sign In' %>
           </div>
+          <br>
 
         <% end %>
 
-        <%= link_to 'Sign Up', new_customer_path %>
-        <%= link_to 'Back',  root_path%>
-        <%= link_to 'Forgot password?', new_passwords_reset_path %>
-        <%= link_to 'Don\'t have an account? Sign Up', new_customer_path %>
+        <%= link_to 'Don\'t have an account? Sign Up', new_customer_path ,{ 'data-toggle' => 'modal', 'data-target' =>'#imageModal'}%>
     </div>
   </div>
 </div>

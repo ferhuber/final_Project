@@ -16,19 +16,5 @@ ActiveAdmin.register Customer do
 
 
 
-  permit_params do
-    [:first_name,
-     :last_name,
-     :email,
-     :phone,
-     :password_digest,
-     :address,
-     :is_admin,
-     :reset_digest,
-     :reset_sent_at,
-     :activation_digest,
-     :activated,
-     :activated_at,
-    :remember_digest]
-   end
+
 end

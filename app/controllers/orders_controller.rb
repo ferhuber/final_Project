@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_customer!
 
 before_action :find_order_id, only: [:submit]
   def order_params
@@ -36,11 +37,14 @@ before_action :find_order_id, only: [:submit]
 
   def show
     @customer = current_customer
+    
+
   end
 
 
   def submit
    OrdersMailer.submit_order(@order).deliver_now
+   redirect_to root_url
   end
 
   def find_order_id

@@ -1,6 +1,7 @@
 class ProductionsController < ApplicationController
   before_action :find_product_id, only: [:create]
-  before_action :find_order_id, only: [:create, :new]
+  before_action :find_order_id, only: [:create, :new, :destroy]
+  before_action :find_production, only: [:destroy]
 
   def production_params
      production_params = params.require(:production).permit(:quantity)
@@ -28,11 +29,13 @@ class ProductionsController < ApplicationController
     end
   end
 
- def show
+  def destroy
+       production = Production.find params[:id]
+       production.destroy
+       redirect_to new_order_production_path(@order.id)
+   end
 
-
- end
-
+   private
 
   def find_product_id
     @product = Product.find_by(title: params[:products] )
@@ -41,4 +44,8 @@ class ProductionsController < ApplicationController
   def find_order_id
     @order = Order.find(params[:order_id])
   end
+
+  def find_production
+      @production = Production.find params[:id]
+    end
 end

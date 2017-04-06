@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   delete     '/logout'        =>  'sessions#destroy'
   get 'customers/profile'   => 'customers#show'
 
-  resources :customers, only: [:new, :index, :create, :edit, :update, :show] do
+  resources :customers, only: [:new, :index, :create, :update, :show] do
   put :password
  end
   resources :passwords_resets, only: [:new, :create, :edit, :update]

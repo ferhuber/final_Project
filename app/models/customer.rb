@@ -3,6 +3,7 @@ class Customer < ApplicationRecord
     has_secure_password
 
     has_many :orders
+    has_many :productions, through: :orders
 
     geocoded_by :address
     after_validation :geocode
@@ -14,6 +15,9 @@ class Customer < ApplicationRecord
     validates :email, presence: true, uniqueness: true, format: VALID_EMAIL_REGEX
     validates :phone, presence: true
     validates :address, presence: true
+
+    validates :password, presence: true
+    # validates :password_confirmation, presence: true
 
     before_validation :downcase_email
 

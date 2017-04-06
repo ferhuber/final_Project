@@ -114,6 +114,7 @@ h2{
 
 .logIn{
   margin-right: 15px;
+  color: white
 }
 
 .logIn a{
@@ -123,6 +124,8 @@ h2{
 #header, #intro, #second{
         width: 100%;
 }
+
+/////////////// home////////////////////
 
 #intro{
         background: image-url('hero-top.png') 50% 0 no-repeat fixed;
@@ -173,7 +176,7 @@ font-size: 1.2em;
 
         background-size: cover;
         color: white;
-        height: 100vh;
+        height: 115vh;
         margin: 0 auto;
         overflow: hidden;
         padding: 0;
@@ -198,17 +201,60 @@ font-size: 1.2em;
 
 #third .about-us{
   padding: 6%;
+  // font-family: 'Alegreya Sans' !important;
+  // text-align: center;
+  color: black;
+}
+
+#third .about-us h2{
   font-family: 'Alegreya Sans' !important;
   text-align: center;
   color: black;
 }
 
 
-#fourth{
+
+#forth{
+		    background-size: cover;
+        color: white;
+        height: 46vh;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 3%;
+}
+
+iframe {
+margin: 40px;
+width: 250px;
+
+}
+
+.content-store{
+
+  height: 220px;
+  width: 240px;
+  margin-top: 40px;
+  margin-left: 25px;
+  font-size: 1.25em;
+    font-family: 'Quicksand';
+    color: white;
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    text-align: center;
+    z-index: 300;
+}
+
+.content-store h4{
+  color: white;
+  font-family: 'Quicksand';
+}
+
+
+#fifth{
         background: image-url('blue_mac2.jpg') 50% 0 no-repeat fixed;
 		    background-size: cover;
         color: white;
-        height: 16vh;
+        height: 26vh;
         width: 100%;
         overflow: hidden;
         padding-top: 3%;
@@ -224,7 +270,7 @@ font-size: 1.2em;
 
 }
 
-.story4{
+.story5{
 
   color: white;
   margin: 0 auto;
@@ -353,7 +399,7 @@ font-size: 1.2em;
 
 .form-template{
   background-color: white;
-  margin-top: 15vh;
+  padding: 20px;
 }
 
 textarea.form-control {
@@ -369,7 +415,7 @@ textarea.form-control {
 
 .product-background{
   background-image: url("products/bg-prodicts.jpg");
-  height: 99.9vh;
+  height: 95vh;
 }
 
 .gallery{
@@ -456,7 +502,7 @@ textarea.form-control {
     text-decoration: none;
 }
 
-////////////////////////////////
+////////////////////////////////search/////////////
 
 #product-form {
   color: black;
@@ -474,6 +520,15 @@ textarea.form-control {
 color: black;
 }
 
+////////////////////modal//////////////////////////
+.picture-modal{
+  width: 300px;
+}
+
+.modal-content{
+max-height: 80vh;
+}
+
 
 ///////////////////footther///////////////////////
 .footer{
@@ -481,4 +536,7 @@ color: black;
   color: white;
   background-color: black;
   height: 50px;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 15px;
 }

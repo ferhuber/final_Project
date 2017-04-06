@@ -1,6 +1,6 @@
 <div class="container-fluid form-template">
   <div class="row">
-    <div class="  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
+    <div class="sessions  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-4 col-lg-5 col-lg-offset-4">
 
       <h1>Forgot password</h1>
         <div class="form-group">
@@ -8,6 +8,7 @@
             <%= f.label :email %>
             <%= f.email_field :email, class: 'form-control' %>
             <div class="action-items">
+              <br>
               <%= f.submit "Submit", class: "btn btn-primary" %>
             </div>
           <% end %>

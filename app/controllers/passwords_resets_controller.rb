@@ -18,6 +18,7 @@ class PasswordsResetsController < ApplicationController
   def edit
     # render json:[params]
     @customer = Customer.find_by(id: params[:id])
+    flash[:modal] = true
   end
 
   def update
@@ -26,6 +27,7 @@ class PasswordsResetsController < ApplicationController
     if @customer.update(password: params[:customer][:password])
       redirect_to root_path(@customer)
     else
+      flash[:modal] = true
       render :edit
     end
   end

@@ -12,8 +12,6 @@ ActiveAdmin.register Type do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-permit_params do
-  [:type_of , :product_id]
-end
+
 
 end

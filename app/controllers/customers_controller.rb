@@ -31,6 +31,7 @@ class CustomersController < ApplicationController
 
   def edit
     @customer = Customer.find params[:id]
+    flash[:modal] = true
   end
 
   def update
@@ -51,7 +52,7 @@ class CustomersController < ApplicationController
   def password
     customer_params = params.permit(:password, :password_confirmation)
     old = params[:current_password]
-    @customer = User.find params[:customer_id]
+    @customer = Customer.find params[:customer_id]
     if !@customer&.authenticate(old)
       flash[:modal] = true
       @customer.errors.add(:current_password, 'mismatch')

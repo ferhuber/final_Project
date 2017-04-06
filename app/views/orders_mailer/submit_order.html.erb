@@ -1,1 +1,14 @@
-<h1>Test</h1>
+<h1>Order Request</h1>
+
+<p>Order number:<%= @order.id %></p>
+<p>Customer:<%= @order.customer.first_name %> <%= @order.customer.last_name %></p>
+<p>Email: <%= @order.customer.email %></p>
+<p>Candies:</p>
+<p><% @order.products.each do |p| %></p>
+<ul>
+  <li><%= p.title %></li>
+
+</ul>
+<% end %>
+
+<p>Should be done until: <%= @order.event.delivery_date %></p>
