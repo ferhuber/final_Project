@@ -1,7 +1,29 @@
 <%= render "layouts/header" %>
 <%= render "home/drawer" %>
+<div id="imageModal" class="modal fade modal-style" role="dialog ">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+        </div>
+      </div>
+  </div>
 <div class="container-fluid  ">
   <div class="row order-background" >
+
+    <div class="menu-order col-lg-12">
+  		<div class="col-lg-offset-1 col-lg-10">
+
+  			<div class="pull-right">
+  				<p><%= link_to  '< BACK', root_path, class: "back-order"%></p>
+  				<%#= link_to 'Submit Order', order_submit_path(@order) %>
+  			</div>
+  			<div class="pull-left">
+  				<p>MAKE YOUR ORDER</p>
+  			</div>
+  		</div>
+    </div>
     <div class=" col-lg-12">
       <div class="order-form">
 
@@ -19,8 +41,8 @@
           <%= simple_form_for [@order, @production] do |p| %>
 
           Qty: <%= p.input_field :quantity %>
-          <%= select_tag "products", options_for_select(@products_t), prompt: "Candies" %>
-          <%= p.button :submit, 'Add Candies', class: 'btn btn-primary'  %>
+          <%= select_tag "products", options_for_select(@products_t), prompt: "Select" %>
+          <%= p.button :submit, 'Add', class: 'btn btn-primary'  %>
           <% end %>
 
         <div class="text-production">
@@ -29,9 +51,10 @@
             <div class="products-order pull-left ">
               <%= p.product.title %>:
               <%= p.quantity %>
-               <%= link_to 'Delete',
-               order_production_path(@order, p.id),
-               method: :delete, class: "delete" %>
+               <%= link_to order_production_path(@order, p.id),
+               method: :delete, class: "delete" do %>
+               <i class="fa fa-trash fa-2x pull-right" aria-hidden="true" style="padding: 5px"></i>
+               <% end %>
             </div>
               <% end %>
         </div>

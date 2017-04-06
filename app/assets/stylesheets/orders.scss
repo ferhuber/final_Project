@@ -15,20 +15,31 @@
 }
 .order-background {
   background-image: url("order/bg-quotation.jpg");
-  height: 99.9vh;
+
+  height: 96vh;
   background-size: cover;
 }
 
+.menu-order{
+  background-color: rgba(246, 90, 83, 0.50);
+  margin-top: 20vh;
+  padding-top: 15px;
+  color: white !important;
+  
+}
 .order-form{
 
   background-color: rgba(246, 90, 83, 0.50);
-  margin-top: 20vh;
+  margin-top: 2vh;
   margin-right: -15px;
   margin-left: -15px;
   padding: 2%;
   color: white !important;
   text-align: center;
+}
 
+.menu-order a{
+  color: white !important;
 }
 
 #event_event_date,

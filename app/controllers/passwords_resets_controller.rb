@@ -19,6 +19,7 @@ class PasswordsResetsController < ApplicationController
     # render json:[params]
     @customer = Customer.find_by(id: params[:id])
     flash[:modal] = true
+    render :edit
   end
 
   def update
