@@ -1,40 +1,44 @@
-<div class="container-fluid order-custumer">
-  <div class="row">
-    <div class="  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-2 col-lg-10 col-lg-offset-2">
+<%= render "layouts/header" %>
+<%= render "home/drawer" %>
+<!-- modal -->
+	<div id="imageModal" class="modal fade modal-style" role="dialog ">
+				<div class="modal-dialog">
 
-      <div id="imageModal" class="modal fade modal-style" role="dialog ">
-    				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
 
-    					<!-- Modal content-->
-    					<div class="modal-content">
+					</div>
+				</div>
+		</div>
+<!--  modal-->
 
-    					</div>
-    				</div>
-    		</div>
+<!-- modal passwords_resets-->
+	<div id="imageModal1" class="modal fade modal-style" role="dialog ">
+				<div class="modal-dialog">
 
-    </p><b>User name:</b><%= @customer.full_name %></p>
+					<!-- Modal content-->
+					<div class="modal-content">
 
-      <% @customer.orders.each do |order| %>
-        <p>
-          <b>Order number:</b><%= order.id %>
-        </p>
+					</div>
+				</div>
+		</div>
+<!--  modal passwords_resets-->
+<div class="container-fluid  ">
+  <div class="row order-background" >
+    <div class=" col-lg-12">
+      <div class="quotation-form">
 
-        <p>
-          <b>Requested in:</b> <%= order.created_at.strftime("%b %d %Y %H:%M ") %>
-        </p>
+          <div class="quotation-submited">
+          <p>Your quotation has been submitted.</p>
+            <p>Soon we will contact you. </p>
+            <p>Sugar Market Team</p>
+          </div>
 
-        <p><b>Acquired in:</b> <%= order.store %></p>
-        <br>
-        <p><b>Candies:</b>
-         <% order.products.each do |p| %>
-         <ul>
-              <li><%= p.title %></li>
-            </ul>
-            <% end %>
-        </p>
-
-      <% end %>
-
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+
+<%= render "layouts/footer" %>

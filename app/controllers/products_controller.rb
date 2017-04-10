@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :find_product_id, only: [:show_image_details]
+
   def new
     @product  = Product.new
   end
@@ -18,7 +19,7 @@ class ProductsController < ApplicationController
   end
 
   def products_params
-  params.require(:product).permit(:flavours, flavours_attributes: [:id, :flavour])
+    params.require(:product).permit(:flavours, flavours_attributes: [:id, :flavour])
   end
 
   private

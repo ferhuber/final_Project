@@ -9,7 +9,6 @@ class ProductionsController < ApplicationController
 
   def new
     # render json:[params]
-
     @production = Production.new
     @products_t = Product.all.pluck(:title).uniq
     # @flavours = Flavour.all.pluck(:flavour).uniq
@@ -24,16 +23,19 @@ class ProductionsController < ApplicationController
     @products = Product.where(id: @product.id)
 
     if (@production.save)
-      # CommentsMailer.notify_post_owner(@comment).deliver_later
     redirect_to new_order_production_path(@order.id)
     end
   end
 
   def destroy
-       production = Production.find params[:id]
-       production.destroy
-       redirect_to new_order_production_path(@order.id)
-   end
+   production = Production.find params[:id]
+   production.destroy
+   redirect_to new_order_production_path(@order.id)
+  end
+
+  def show
+   #code
+  end
 
    private
 
@@ -46,6 +48,6 @@ class ProductionsController < ApplicationController
   end
 
   def find_production
-      @production = Production.find params[:id]
-    end
+    @production = Production.find params[:id]
+  end
 end

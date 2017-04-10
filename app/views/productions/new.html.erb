@@ -1,14 +1,28 @@
 <%= render "layouts/header" %>
 <%= render "home/drawer" %>
-<div id="imageModal" class="modal fade modal-style" role="dialog ">
-      <div class="modal-dialog">
+<!-- modal -->
+	<div id="imageModal" class="modal fade modal-style" role="dialog ">
+				<div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
+					<!-- Modal content-->
+					<div class="modal-content">
 
-        </div>
-      </div>
-  </div>
+					</div>
+				</div>
+		</div>
+<!--  modal-->
+
+<!-- modal passwords_resets-->
+	<div id="imageModal1" class="modal fade modal-style" role="dialog ">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+
+					</div>
+				</div>
+		</div>
+<!--  modal passwords_resets-->
 <div class="container-fluid  ">
   <div class="row order-background" >
 
@@ -20,21 +34,19 @@
   				<%#= link_to 'Submit Order', order_submit_path(@order) %>
   			</div>
   			<div class="pull-left">
-  				<p>MAKE YOUR ORDER</p>
+  				<p>MAKE YOUR QUOTATION</p>
   			</div>
   		</div>
     </div>
     <div class=" col-lg-12">
-      <div class="order-form">
+    <div class="order-form">
 
         Sugar, I'd like to make a <%= @order.event.type_of %>
         for <%= @order.event.number_people %> people,
         on <%= @order.event.event_date %>
         <br>
         I'd like to have my order ready to take at   <%= @order.event.delivery_date %>
-
         at <%= @order.store %>
-
 
         <div class="products-form">
 
@@ -45,28 +57,27 @@
           <%= p.button :submit, 'Add', class: 'btn btn-primary'  %>
           <% end %>
 
-        <div class="text-production">
+		        <div class="text-production">
 
-            <% @order.productions.each do |p| %>
-            <div class="products-order pull-left ">
-              <%= p.product.title %>:
-              <%= p.quantity %>
-               <%= link_to order_production_path(@order, p.id),
-               method: :delete, class: "delete" do %>
-               <i class="fa fa-trash fa-2x pull-right" aria-hidden="true" style="padding: 5px"></i>
-               <% end %>
-            </div>
-              <% end %>
-        </div>
-<div class="col-lg-5 form-submit-order">
-  <%= link_to 'Submit Order', order_submit_path(@order), class: 'btn btn-primary submit-order' %>
-</div>
+		            <% @order.productions.each do |p| %>
+		            <div class="products-order pull-left ">
+		              <%= p.product.title %>:
+		              <%= p.quantity %>
+		               <%= link_to order_production_path(@order, p.id),
+		               method: :delete, class: "delete" do %>
+		               <i class="fa fa-trash fa-2x pull-right" aria-hidden="true" style="padding: 5px"></i>
+		               <% end %>
+		            </div>
+		              <% end %>
+		        </div>
+						<div class="col-lg-5 form-submit-order">
+						  <%= link_to 'Submit Order', order_submit_path(@order), class: 'btn btn-primary submit-order' %>
+						</div>
 
         </div>
       </div>
     </div>
   </div>
 </div>
-
 
 <%= render "layouts/footer" %>

@@ -4,6 +4,6 @@ class Order < ApplicationRecord
   belongs_to :customer
   belongs_to :event
 
-validates :store, presence: true
+  validates :store, presence: true
 
 end

@@ -19,7 +19,15 @@
 // .gr__localhost{
 //   background-color: white;
 // }
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Open+Sans+Condensed:300');
+
 
 p, ul{
   font-family: 'Quicksand' ;
+}
+
+body{
+  background-color: white;
 }

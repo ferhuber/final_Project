@@ -31,7 +31,7 @@
     width: 50%;
     margin-left: 25%;
     padding: 40px;
-    height: 30vh;
+    height: 31vh;
 }
 
 .products-order{
@@ -40,7 +40,7 @@
   border-radius: 50px;
   margin-right: 10px;
   padding: 10px;
-  width: 250px;
+  height: 5vh;
 }
 
 .submit-order{
@@ -67,4 +67,29 @@
   color: white !important;
   margin-left: 10px;
   font-size: 0.50em
+}
+.quotation-form{
+  background-color: rgba(246, 90, 83, 0.50);
+  margin-top: 2vh;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding: 2%;
+  color: white !important;
+  text-align: center;
+  margin-top: 24vh;
+
+}
+
+.quotation-submited{
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  margin-top: 2vh;
+  line-height: 1em;
+  color: white;
+  border: 6px solid rgba(255, 255, 255, 0.7);
+  width: 50%;
+  margin-left: 25%;
+  padding: 40px;
+  color: white !important;
+
 }

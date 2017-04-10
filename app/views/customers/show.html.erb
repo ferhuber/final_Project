@@ -1,15 +1,14 @@
 <div class="container-fluid form-template">
   <div class="row">
-    <%= link_to 'X',  root_path, class: "pull-right back-cust"%>
+    <hr>
+    <%#= link_to 'X' class: "pull-right back-cust",{data-dismiss="modal"}%>
     <div class="sessions  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-4 col-lg-8 col-lg-offset-3">
         <br>
-      <p><b>First Name:</b> <%= @customer.first_name %> </p>
-      <p><b>Last Name:</b> <%= @customer.last_name %></p>
+      <p><b>Name:</b> <%= @customer.first_name.titleize %> <%= @customer.last_name.titleize%></p>
       <p><b>Email:</b> <%= @customer.email %></p>
-      <p><b>Address:</b> <%= @customer.address %></p>
-      <p><b>Phone:</b> <%= @customer.phone %></p>
+
       <%= link_to 'Logout', logout_path, method: :delete %> |
-      <%= link_to 'Change Password',edit_passwords_reset_path(@customer.id),{ 'data-toggle' => 'modal', 'data-target' =>'#imageModal'}%> 
+      <%= link_to 'Change Password',edit_passwords_reset_path(@customer.id),{ 'data-dismiss' =>'modal' ,'data-toggle' => 'modal', 'data-target' =>'#imageModal1'}%>
 
     <br>
 
@@ -25,7 +24,8 @@
         </div>
 
 
-
       </div>
+      <button type="button" class="pull-right" data-dismiss="modal">Close</button>
     </div>
+    <hr>
   </div>

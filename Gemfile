@@ -44,10 +44,10 @@ gem 'inherited_resources', '~> 1.7'
 gem 'activeadmin', '1.0.0.pre5'
 gem 'devise'
 gem 'letter_opener'
+gem 'geocoder'
 gem "paperclip", "~> 5.0.0"
 gem "mini_magick"
 # gem 'pg_search'
-gem 'geocoder'
 # gem 'carrierwave', '~> 1.0'
 
 # Use Capistrano for deployment

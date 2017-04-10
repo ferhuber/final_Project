@@ -1,9 +1,8 @@
-
-<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> -->
 <%= render "layouts/header" %>
 
 <div class="container home-body col-lg-12">
 
+<!-- modal -->
 	<div id="imageModal" class="modal fade modal-style" role="dialog ">
 				<div class="modal-dialog">
 
@@ -13,7 +12,19 @@
 					</div>
 				</div>
 		</div>
+<!--  modal-->
 
+<!-- modal passwords_resets-->
+	<div id="imageModal1" class="modal fade modal-style" role="dialog ">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+
+					</div>
+				</div>
+		</div>
+<!--  modal passwords_resets-->
 <%= render "home/drawer" %>
 
 		<div id="intro">
@@ -27,11 +38,6 @@
 					 </div>
 				 </section>
 			 </div>
-			 <!-- <section class="bottom col-lg-offset-5 col-lg-2">
-					<a id="scrollToContent" href="#second"> OUR PRODUCTS <br>
-						<%= image_tag("arrow_down.png", :class => "arrow")%>
-					</a>
-				</section> -->
 		</div>
 
 		<div id="second">
@@ -69,19 +75,13 @@
 						</div>
 
          <div class="online-order col-lg-offset-2 col-lg-8">
-					 		<p>ONLINE ORDERING IS NOW AVAILABLE</p>
-							<a href="/orders/new">
-							<p><button class="order-button" type="button" name="button">GO</button></p>
-						  </a>
-				</div>
+				 		<p>ONLINE QUOTATION IS NOW AVAILABLE</p>
+						<a href="/orders/new">
+						<p><button class="order-button" type="button" name="button">GO</button></p>
+					  </a>
+				 </div>
 
-
-		 			</div>
-
-		      <section class="bottom2">
-		 						  <!-- <img src="assets/images/arrow_down.png"> -->
-		 			</section>
-
+	  		</div>
 		 	</div>
    </div>
 </div>
@@ -111,7 +111,6 @@
 			 <div class="maps col-lg-offset-1 col-lg-10">
 				 <div class="col-lg-3 ">
 					 <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&origin=49.2400367,-122.9931887&destination=codecore+Vancouver,BC width="25px" height="220px""  ></iframe>
-
 				 </div>
 
 					<div class="content-store col-lg-3">
@@ -123,7 +122,6 @@
 
 					<div class="col-lg-3">
  					 <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&origin=49.2400367,-122.9931887&destination=BCIT+Burnaby,BC width="25px" height="220px"" ></iframe>
-
  				 </div>
 
  					<div class="content-store col-lg-3">
@@ -131,36 +129,34 @@
 						<p>1234 Sugar Street</p>
 						<p>Burnaby, British Columbia, Canada</p>
 						<p><i class="fa fa-phone-square fa-1x"></i> 778 990 6667</p>
-
-						</div>
 					</div>
+			</div>
 					<% else %>
 					<div class="maps col-lg-offset-1 col-lg-10">
-	 				 <div class="col-lg-3 ">
-						 <iframe src="  https://www.google.com/maps/embed/v1/place?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&q=CodeCore,+Vancouver,+BC&attribution_source=Google+Maps+Embed+API&attribution_ios_deep_link_id=comgooglemaps://?daddr=CodeCore,+Vancouver,+BC
-						 " width="25px" height="220px"></iframe>
-	 				 </div>
+						<div class="col-lg-3 ">
+							<iframe src="  https://www.google.com/maps/embed/v1/place?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&q=CodeCore,+Vancouver,+BC&attribution_source=Google+Maps+Embed+API&attribution_ios_deep_link_id=comgooglemaps://?daddr=CodeCore,+Vancouver,+BC
+							" width="25px" height="220px"></iframe>
+						</div>
 
-	 					<div class="content-store col-lg-3">
-	 						<h4>Sugar Bakery Downtown</h4>
-	 						<p>1633 Bakery Street</p>
-	 						<p>Vancouver, British Columbia, Canada</p>
-	 						<p><i class="fa fa-phone-square fa-1x"></i> 778 990 7634</p>
-	 					</div>
+						<div class="content-store col-lg-3">
+							<h4>Sugar Bakery Downtown</h4>
+							<p>1633 Bakery Street</p>
+							<p>Vancouver, British Columbia, Canada</p>
+							<p><i class="fa fa-phone-square fa-1x"></i> 778 990 7634</p>
+						</div>
 
-	 					<div class="col-lg-3">
+						<div class="col-lg-3">
 							<iframe src="  https://www.google.com/maps/embed/v1/place?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&q=BCIT,+Burnaby,+BC&attribution_source=Google+Maps+Embed+API&attribution_ios_deep_link_id=comgooglemaps://?daddr=CodeCore,+Vancouver,+BC
 							" width="25px" height="220px"></iframe>
-	  				 </div>
+						</div>
 
-	  					<div class="content-store col-lg-3">
-	 						<h4>Sugar Bakery Burnaby</h4>
-	 						<p>1234 Sugar Street</p>
-	 						<p>Burnaby, British Columbia, Canada</p>
-	 						<p><i class="fa fa-phone-square fa-1x"></i> 778 990 6667</p>
-
-	 						</div>
-	 					</div>
+						<div class="content-store col-lg-3">
+							<h4>Sugar Bakery Burnaby</h4>
+							<p>1234 Sugar Street</p>
+							<p>Burnaby, British Columbia, Canada</p>
+							<p><i class="fa fa-phone-square fa-1x"></i> 778 990 6667</p>
+						</div>
+	 				</div>
 
 					<% end %>
 

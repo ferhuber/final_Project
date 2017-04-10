@@ -4,8 +4,9 @@
   margin-bottom: 20px;
   padding-top: 10px;
   height: 4vh;
-  margin-top: 19vh;}
-
+  margin-top: 19vh;
+  position: fixed;
+}
   .menu a{
     color: white !important;
     }
@@ -22,6 +23,9 @@
   height: 4vh;
   padding-top: 5px;
   color: #f16169;
+  position: fixed;
+  margin-top: 25vh;
+  z-index: 100;
 }
 
 .search-text{

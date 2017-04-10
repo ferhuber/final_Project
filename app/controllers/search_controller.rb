@@ -6,6 +6,7 @@ class SearchController < ApplicationController
     @calories = Product.all.pluck(:calories).uniq
     @flavours = Flavour.all.pluck(:flavour).uniq
     @types = Type.all.pluck(:type_of).uniq
+    @products = Product.all
 
     # criteria = []]
     # critera << ("calories <= ?", params[:calories]) if params[:calories].present?
@@ -37,6 +38,7 @@ class SearchController < ApplicationController
 
   def show
     @product = Product.find(params[:id] )
+    @products = Product.all
   end
 
   end

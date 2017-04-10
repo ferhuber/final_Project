@@ -1,14 +1,28 @@
 <%= render "layouts/header" %>
 <%= render "home/drawer" %>
-<div id="imageModal" class="modal fade modal-style" role="dialog ">
-      <div class="modal-dialog">
+<!-- modal -->
+	<div id="imageModal" class="modal fade modal-style" role="dialog ">
+				<div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
+					<!-- Modal content-->
+					<div class="modal-content">
 
-        </div>
-      </div>
-  </div>
+					</div>
+				</div>
+		</div>
+<!--  modal-->
+
+<!-- modal passwords_resets-->
+	<div id="imageModal1" class="modal fade modal-style" role="dialog ">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+
+					</div>
+				</div>
+		</div>
+<!--  modal passwords_resets-->
 <div class="container-fluid  ">
   <div class="row order-background" >
     <div class="menu-order col-lg-12">
@@ -16,10 +30,9 @@
 
   			<div class="pull-right">
   				<p><%= link_to  '< BACK', root_path, class: "back-order"%></p>
-  				<%#= link_to 'Submit Order', order_submit_path(@order) %>
   			</div>
   			<div class="pull-left">
-  				<p>MAKE YOUR ORDER</p>
+    				<p>MAKE YOUR QUOTATION</p>
   			</div>
   		</div>
     </div>
@@ -37,7 +50,7 @@
 
         I'd like to have my order ready to take at   <%= e.date_field :delivery_date,as: :date %>
         <% end %>
-        at <%= o.input_field :store, collection: ['Burnaby', 'BC'], prompt: 'Store', label: false %>
+        at <%= o.input_field :store, collection: ['Burnaby', 'Downtown'], prompt: 'Store', label: false %>
 
         <div><%= o.submit class: 'btn btn-primary' %></div>
         <% end %>

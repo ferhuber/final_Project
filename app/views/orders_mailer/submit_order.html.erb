@@ -1,14 +1,20 @@
 <h1>Order Request</h1>
 
-<p>Order number:<%= @order.id %></p>
+<p>Order Number:<%= @order.id %></p>
 <p>Customer:<%= @order.customer.first_name %> <%= @order.customer.last_name %></p>
 <p>Email: <%= @order.customer.email %></p>
-<p>Candies:</p>
+<p>Phone: <%= @order.customer.phone %></p>
+<br>
+<h4>Event type: <%= @order.event.type_of %></h4>
+<p>Event date: <%= @order.event.event_date %></p>
+<p>Event delivery: <%= @order.event.delivery_date %></p>
+<hr>
+<h3>Order Details:</h3>
+<p>Number of people: <%= @order.event.number_people%></p>
+<p>Products:</p>
 <p><% @order.products.each do |p| %></p>
 <ul>
   <li><%= p.title %></li>
-
 </ul>
 <% end %>
-
-<p>Should be done until: <%= @order.event.delivery_date %></p>
+<hr>

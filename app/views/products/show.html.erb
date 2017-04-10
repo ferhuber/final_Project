@@ -51,7 +51,7 @@
 				<%#= link_to 'Submit Order', order_submit_path(@order) %>
 			</div>
 			<div class="pull-left">
-				<p>MENU</p>
+				<p><%= link_to  'PRODUCTS', product_path(@products) %></p>
 			</div>
 		</div>
   </div>
@@ -62,7 +62,7 @@
 		<%= form_tag "/search", method: :get do %>
 
 		<b style="color: white">Search: </b> <%= select_tag "flavour", options_for_select(@flavours),prompt: "Flavours" %>
-		<%= select_tag "calories", options_for_select(@calories), prompt: "Calories" %>
+		<%= select_tag "calories", options_for_select(@calories.sort), prompt: "Calories" %>
 		<%= select_tag "type_of", options_for_select(@types),prompt: "Types" %>
 
 		<%= submit_tag "GO", class: "search-button" %>
@@ -77,10 +77,11 @@
     <% @found.each do |f| %>
     <div class="gallery-thumb">
       <a href="#" class="recent-work" style="background-image:url(<%=  f.image %>)">
-          <p class="prod-hover-desc"><%= f.title %><br><i class="fa fa-star fa-1x"></i>
+          <p class="prod-hover-desc"><%= f.title %><br></p>
+						<!-- <i class="fa fa-star fa-1x"></i> -->
+          <!-- <i class="fa fa-star fa-1x"></i>
           <i class="fa fa-star fa-1x"></i>
-          <i class="fa fa-star fa-1x"></i>
-          <i class="fa fa-star fa-1x"></i></p>
+          <i class="fa fa-star fa-1x"></i></p> -->
 					<span  href="/products/<%= f.id %>/show_image_details" class="btn btn-o-white" data-toggle="modal" data-target="#imageModal">See More</span>
   		</a>
 
@@ -91,10 +92,11 @@
       <% @products.each do |p| %>
       <div class="gallery-thumb">
         <a href="#" class="recent-work" style="background-image:url(<%=  p.image %>)">
-            <p class="prod-hover-desc"><%= p.title %><br><i class="fa fa-star fa-1x"></i>
+					<p class="prod-hover-desc"><%= p.title %><br></p>
+							<!-- <i class="fa fa-star fa-1x"></i> -->
+            <!-- <i class="fa fa-star fa-1x"></i>
             <i class="fa fa-star fa-1x"></i>
-            <i class="fa fa-star fa-1x"></i>
-            <i class="fa fa-star fa-1x"></i></p>
+            <i class="fa fa-star fa-1x"></i></p> -->
     				<span  href="/products/<%= p.id %>/show_image_details" class="btn btn-o-white" data-toggle="modal" data-target="#imageModal">See More</span>
     		</a>
       </div>
@@ -103,15 +105,29 @@
     <% end %>
   </div>
 
-  <div id="imageModal" class="modal fade modal-style" role="dialog">
-        <div class="modal-dialog">
+	<!-- modal -->
+		<div id="imageModal" class="modal fade modal-style" role="dialog ">
+					<div class="modal-dialog">
 
-          <!-- Modal content-->
-          <div class="modal-content">
+						<!-- Modal content-->
+						<div class="modal-content">
 
-          </div>
-        </div>
-    </div>
+						</div>
+					</div>
+			</div>
+	<!--  modal-->
+
+	<!-- modal passwords_resets-->
+		<div id="imageModal1" class="modal fade modal-style" role="dialog ">
+					<div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+
+						</div>
+					</div>
+			</div>
+	<!--  modal passwords_resets-->
 
   </div>
 </div>

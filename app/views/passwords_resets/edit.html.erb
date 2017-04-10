@@ -1,7 +1,8 @@
 <div class="container-fluid form-template">
   <div class="row">
-    <%= link_to 'X',  root_path, class: "pull-right back-cust"%>
-    <div class="sessions  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-4 col-lg-10 col-lg-offset-2">
+    <%= link_to 'X', root_path, class: "pull-right back-cust"%>
+    <hr>
+    <div class="sessions  col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-4 col-lg-9 col-lg-offset-2">
 
             <%= @customer.errors.full_messages.join(', ') %>
             <h1> Password Reset </h1>
@@ -19,10 +20,8 @@
             <%= f.submit 'Update',class: 'button-form' %>
             <% end %>
 
-            <!-- <div class="modal-footer"> -->
-              <!-- <button type="button" class="button-form" data-dismiss="modal">Close</button> -->
-            <!-- </div> -->
-          </div>
-        </div>
       </div>
     </div>
+    <hr>
+  </div>
+</div>

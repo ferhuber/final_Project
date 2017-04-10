@@ -21,11 +21,9 @@ class HomeController < ApplicationController
   end
 
   def show
-
     @product = Product.find params[:id]
     @flavours = @product.flavours
     @types = @product.types
-
   end
 
 end

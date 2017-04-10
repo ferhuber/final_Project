@@ -29,7 +29,7 @@ before_action :find_order_id, only: [:submit]
 
      if @order.save && @events.save
        session[:order_id] = @order
-       redirect_to new_order_production_path(@order.id), notice: 'Order created successfully!'
+       redirect_to new_order_production_path(@order.id)
      else
       render :new
      end
@@ -37,14 +37,13 @@ before_action :find_order_id, only: [:submit]
 
   def show
     @customer = current_customer
-    
-
   end
 
 
   def submit
+    @production = Production.last
    OrdersMailer.submit_order(@order).deliver_now
-   redirect_to root_url
+   redirect_to order_path(@order),notice: 'Quotation created successfully!'
   end
 
   def find_order_id
