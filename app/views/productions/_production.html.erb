@@ -1,0 +1,9 @@
+
+<div class="products-order pull-left" id="<%= dom_id(p) %>" style="<%= style if defined?(style) %>">
+  <%= p.product.title %>:
+  <%= p.quantity %>
+  <%= link_to order_production_path(@order, p.id),remote: true,
+   method: :delete, class: "delete" do %>
+     <i class="fa fa-trash fa-2x pull-right" aria-hidden="true" style="padding: 5px"></i>
+   <% end %>
+</div>

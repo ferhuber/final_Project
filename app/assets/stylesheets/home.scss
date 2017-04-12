@@ -1,13 +1,13 @@
 .home-body {
-    color: #f16169;
-    background: #f16169;
-    background: -webkit-linear-gradient(#f16169, #ff7555, #ff5572);
-    background: -o-linear-gradient(#f16169, #ff7555, #ff5572);
-    background: -moz-linear-gradient(#f16169, #ff7555, #ff5572);
-    background: linear-gradient(#f16169, #ff7555, #ff5572);
-    margin: 0;
-    min-width: 980px;
-    padding: 0;
+  color: #f16169;
+  background: #f16169;
+  background: -webkit-linear-gradient(#f16169, #ff7555, #ff5572);
+  background: -o-linear-gradient(#f16169, #ff7555, #ff5572);
+  background: -moz-linear-gradient(#f16169, #ff7555, #ff5572);
+  background: linear-gradient(#f16169, #ff7555, #ff5572);
+  margin: 0;
+  min-width: 980px;
+  padding: 0;
 }
 
 
@@ -19,7 +19,6 @@
   text-align: center;
   border-radius: 5px;
   margin-top: 5vh;
-
 }
 
 .bottom {
@@ -27,23 +26,21 @@
   bottom: 10px;
   text-align: center;
   width: 300px;
-
 }
 
 .bottom a {
-    opacity: 0.7;
-
+  opacity: 0.7;
 }
 
 .bottom a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .bottom #scrollToContent {
-    color: #ffffff;
-    font-size: 1em;
-    font-family: "Quicksand";
-    text-decoration: none;
+  color: #ffffff;
+  font-size: 1em;
+  font-family: "Quicksand";
+  text-decoration: none;
 }
 
 .arrow{
@@ -104,9 +101,7 @@
 }
 
 .img-strawbery {
-
   width: 87%;
-
 }
 
 .tarte {
@@ -117,9 +112,7 @@
 }
 
 .img-tarte {
-
   width: 76%;
-
 }
 
 button{
@@ -180,7 +173,7 @@ h1 {
 #slider {
   position: relative;
   overflow: hidden;
-  margin: 80px auto 0 -20px;
+  margin: 80px auto 0 -15px;
 }
 
 #slider ul {
@@ -197,9 +190,9 @@ h1 {
   float: left;
   margin: 0;
   padding: 0;
-  width: 2000px;
+  width: 2200px;
   // width: 1366px;
-  height: 443px;
+  height: 550px;
   background: white;
   text-align: center;
   line-height: 300px;

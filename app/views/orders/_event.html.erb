@@ -1,0 +1,5 @@
+Sugar, I'd like to make a <%= e.input_field :type_of , collection: ['Wedding', 'Workshop', 'Birthday Party'], label: false, prompt: 'Event' %>
+for <%= e.input_field :number_people, range: 100 %> people,
+on <%= e.date_field :event_date %>
+
+I'd like to have my order ready to take at   <%= e.date_field :delivery_date,as: :date %>

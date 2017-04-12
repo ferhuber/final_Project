@@ -1,0 +1,15 @@
+<div class="order-form" id="js-order-form">
+
+
+  <%= simple_form_for @order do |order| %>
+
+    <%= simple_fields_for @event do |event| %>
+      <%= render "event", e: event %>
+    <% end %>
+
+  at <%= order.input_field :store, collection: ['Burnaby', 'Downtown'], prompt: 'Store', label: false %>
+
+  <div><%= order.submit class: 'btn btn-primary' %></div>
+  <% end %>
+
+  </div>

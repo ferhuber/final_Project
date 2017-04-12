@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+  const list = $(".gallery-thumb");
+  var index = 0;
+
+  const interval = setInterval(function() {
+    $(list[index]).addClass('fade-in');
+    index++;
+    if (index === list.length) {
+      clearInterval(interval);
+    }
+  }, 50)
+
+
   $wrapper = $('#wrapper');
   $drawerRight = $('#drawer-right');
 
@@ -98,8 +110,6 @@ jQuery(document).ready(function ($) {
     //   e.preventDefault();
     //     moveRight();
     // });
-
-
 
     $('#product-select').on('change',function() {
       const prodID = ($('#product-select option:selected').attr('id'));

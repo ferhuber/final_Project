@@ -3,10 +3,7 @@
 <!-- modal -->
 	<div id="imageModal" class="modal fade modal-style" role="dialog ">
 				<div class="modal-dialog">
-
-					<!-- Modal content-->
 					<div class="modal-content">
-
 					</div>
 				</div>
 		</div>
@@ -15,10 +12,7 @@
 <!-- modal passwords_resets-->
 	<div id="imageModal1" class="modal fade modal-style" role="dialog ">
 				<div class="modal-dialog">
-
-					<!-- Modal content-->
 					<div class="modal-content">
-
 					</div>
 				</div>
 		</div>
@@ -28,10 +22,8 @@
 
     <div class="menu-order col-lg-12">
   		<div class="col-lg-offset-1 col-lg-10">
-
   			<div class="pull-right">
-  				<p><%= link_to  '< BACK', root_path, class: "back-order"%></p>
-  				<%#= link_to 'Submit Order', order_submit_path(@order) %>
+  				<p><%= link_to  '< BACK', new_order_path, class: "back-order"%></p>
   			</div>
   			<div class="pull-left">
   				<p>MAKE YOUR QUOTATION</p>
@@ -39,7 +31,7 @@
   		</div>
     </div>
     <div class=" col-lg-12">
-    <div class="order-form">
+    <div class="row order-form">
 
         Sugar, I'd like to make a <%= @order.event.type_of %>
         for <%= @order.event.number_people %> people,
@@ -50,29 +42,21 @@
 
         <div class="products-form">
 
-          <%= simple_form_for [@order, @production] do |p| %>
+          <%= simple_form_for [@order, @production], remote: true do |p| %>
 
           Qty: <%= p.input_field :quantity %>
           <%= select_tag "products", options_for_select(@products_t), prompt: "Select" %>
           <%= p.button :submit, 'Add', class: 'btn btn-primary'  %>
           <% end %>
 
-		        <div class="text-production">
-
-		            <% @order.productions.each do |p| %>
-		            <div class="products-order pull-left ">
-		              <%= p.product.title %>:
-		              <%= p.quantity %>
-		               <%= link_to order_production_path(@order, p.id),
-		               method: :delete, class: "delete" do %>
-		               <i class="fa fa-trash fa-2x pull-right" aria-hidden="true" style="padding: 5px"></i>
-		               <% end %>
-		            </div>
-		              <% end %>
-		        </div>
+		        <div class="text-production" id="js-text-production">
+		            <% @order.productions.each do |production| %>
+				        	<%= render "production", p: production %>
+		            <% end %>
 						<div class="col-lg-5 form-submit-order">
 						  <%= link_to 'Submit Order', order_submit_path(@order), class: 'btn btn-primary submit-order' %>
 						</div>
+					</div>
 
         </div>
       </div>

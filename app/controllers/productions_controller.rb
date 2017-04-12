@@ -4,7 +4,7 @@ class ProductionsController < ApplicationController
   before_action :find_production, only: [:destroy]
 
   def production_params
-     production_params = params.require(:production).permit(:quantity)
+     production_params = params.require(:production).permit(:quantity, )
   end
 
   def new
@@ -15,7 +15,6 @@ class ProductionsController < ApplicationController
   end
 
   def create
-    # render json:[params]
     @production = Production.new production_params
     @products_t = Product.all.pluck(:title).uniq
     @production.product_id = @product.id
@@ -23,18 +22,26 @@ class ProductionsController < ApplicationController
     @products = Product.where(id: @product.id)
 
     if (@production.save)
-    redirect_to new_order_production_path(@order.id)
+      respond_to do |format|
+        format.html {redirect_to new_order_production_path(@order.id)}
+        format.js {}
+      end
+    else
+      # format.html {alert: 'Please, fill the field bellow'}
+      # format.js {}
     end
   end
 
   def destroy
    production = Production.find params[:id]
    production.destroy
-   redirect_to new_order_production_path(@order.id)
-  end
-
-  def show
-   #code
+   respond_to do |format|
+     format.html do
+       redirect_to new_order_production_path(@order.id),
+                      notice: 'Product deleted!'
+     end
+     format.js { render }
+   end
   end
 
    private

@@ -5,8 +5,8 @@ class HomeController < ApplicationController
     @calories = Product.all.pluck(:calories).uniq
     @titles = Product.all.pluck(:title).uniq
     @flavours = Flavour.all.pluck(:flavour).uniq
-
   end
+
   def index
     @products = Product.order(created_at: :desc)
     @calories = Product.all.pluck(:calories).uniq
@@ -15,6 +15,7 @@ class HomeController < ApplicationController
 
       if current_customer.present?
       @location = current_customer
+
       else
       @location = Location.last
       end

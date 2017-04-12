@@ -5,6 +5,14 @@ class ProductsController < ApplicationController
     @product  = Product.new
   end
 
+  def index
+      # render json:[params]
+    @products = Product.order(created_at: :desc)
+    @calories = Product.all.pluck(:calories).uniq
+    @flavours = Flavour.all.pluck(:flavour).uniq
+    @types = Type.all.pluck(:type_of).uniq
+  end
+
   def show
       # render json:[params]
     @products = Product.order(created_at: :desc)

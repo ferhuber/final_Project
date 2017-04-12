@@ -13,7 +13,6 @@
 }
 .text-production{
   color: white;
-  // position: absolute;
 }
 
 .order-form{
@@ -22,16 +21,16 @@
 }
 
 .products-form{
-
-    margin-bottom: 15px;
-    margin-top: 3vh;
-    font-family: 'Quicksand';
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    width: 50%;
-    margin-left: 25%;
-    padding: 40px;
-    height: 31vh;
+  margin-bottom: 15px;
+  margin-top: 3vh;
+  font-family: 'Quicksand';
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  width: 50%;
+  margin-left: 25%;
+  padding: 40px;
+  height: 31vh;
+  z-index: 100
 }
 
 .products-order{
@@ -41,14 +40,14 @@
   margin-right: 10px;
   padding: 10px;
   height: 5vh;
+  z-index: 999;
 }
 
 .submit-order{
   border-radius: 50px;
-  margin-top: 23vh;
+  margin-top: 19vh;
   background-color: rgba(255, 255, 255, 0.9);
-  // position: absolute;
-  // margin-bottom: 20px;
+  z-index: 100
 }
 
 .submit-order:hover{
@@ -60,7 +59,7 @@
 .form-submit-order{
   position: absolute;
   height: 0vh;
-    margin-top: 0vh;
+  margin-top: 0vh;
 }
 
 .delete{
@@ -68,6 +67,7 @@
   margin-left: 10px;
   font-size: 0.50em
 }
+
 .quotation-form{
   background-color: rgba(246, 90, 83, 0.50);
   margin-top: 2vh;
@@ -91,5 +91,4 @@
   margin-left: 25%;
   padding: 40px;
   color: white !important;
-
 }

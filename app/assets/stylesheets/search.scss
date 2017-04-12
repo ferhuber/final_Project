@@ -6,6 +6,7 @@
   height: 4vh;
   margin-top: 19vh;
   position: fixed;
+  z-index: 502;
 }
   .menu a{
     color: white !important;
@@ -31,12 +32,11 @@
 .search-text{
   color: white;
 }
+
 .search-button{
-  // color: white;
   background-color: white !important;
 }
 
 .search-button a:hover{
-  // color: white;
   background-color: rgba(241, 97, 105, 0.17) !important;
 }

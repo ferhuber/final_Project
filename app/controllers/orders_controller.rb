@@ -29,9 +29,12 @@ before_action :find_order_id, only: [:submit]
 
      if @order.save && @events.save
        session[:order_id] = @order
-       redirect_to new_order_production_path(@order.id)
+       respond_to do |format|
+         format.html {redirect_to new_order_production_path(@order.id)}
+         format.json {}
+       end
      else
-      render :new
+      redirect_to new_order_path, alert: 'Please, fill the field bellow'
      end
   end
 
@@ -39,11 +42,10 @@ before_action :find_order_id, only: [:submit]
     @customer = current_customer
   end
 
-
   def submit
     @production = Production.last
-   OrdersMailer.submit_order(@order).deliver_now
-   redirect_to order_path(@order),notice: 'Quotation created successfully!'
+    OrdersMailer.submit_order(@order).deliver_now
+    redirect_to order_path(@order),notice: 'Quotation created successfully!'
   end
 
   def find_order_id

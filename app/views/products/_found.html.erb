@@ -1,0 +1,10 @@
+<div class="gallery-thumb" id="<%= dom_id(f) %>" >
+  <a href="#" class="recent-work" style="background-image:url(<%=  f.image %>)">
+      <p class="prod-hover-desc"><%= f.title %><br></p>
+        <!-- <i class="fa fa-star fa-1x"></i> -->
+      <!-- <i class="fa fa-star fa-1x"></i>
+      <i class="fa fa-star fa-1x"></i>
+      <i class="fa fa-star fa-1x"></i></p> -->
+      <span  href="/products/<%= f.id %>/show_image_details" class="btn btn-o-white" data-toggle="modal" data-target="#imageModal">See More</span>
+  </a>
+</div>

@@ -21,8 +21,9 @@ ActiveAdmin.register Product do
       f.input :image
     end
 
+
     f.inputs "Relationships" do
-      f.input :types, as: :select, collection: Type.all.map{|type| [type.type_of, type.id]}
+     f.input :types, as: :select, collection: Type.all.map{|type| [type.type_of, type.id]}
     end
 
     f.inputs "Relationships" do

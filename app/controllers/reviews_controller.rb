@@ -3,7 +3,6 @@ class ReviewsController < ApplicationController
     rating_params = params.require(:review).permit(:rating , :body)
   end
 
-
   def new
     # render json:[params]
     @reviews = Review.new
