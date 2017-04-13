@@ -77,7 +77,7 @@
 	    <% end %>
       <% else %>
         <% @products.each do |p| %>
-          <%= render "products", p: p %>
+          <%= render "products/product", p: p %>
         <% end %>
     <% end %>
   </div>

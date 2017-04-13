@@ -8,9 +8,9 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
-/app/assets/images
-/config/initializers/app_keys.rb
-/public/uploads/*
+#/app/assets/images
+#/config/initializers/app_keys.rb
+#/public/uploads/*
 **.orig
 rerun.txt
 pickle-email-*.html

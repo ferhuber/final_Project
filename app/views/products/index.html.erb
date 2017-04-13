@@ -40,7 +40,7 @@
 	    <% end %>
       <% else %>
         <% @products.each do |p| %>
-          <%= render "product", p: p %>
+          <%= render "products/product", p: p %>
         <% end %>
     <% end %>
   </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170406010644) do
+ActiveRecord::Schema.define(version: 20170412185940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -106,6 +106,15 @@ ActiveRecord::Schema.define(version: 20170406010644) do
     t.index ["product_id"], name: "index_flavours_on_product_id", using: :btree
   end
 
+  create_table "flavours_of_products", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "flavour_id"
+    t.integer  "product_id"
+    t.index ["flavour_id"], name: "index_flavours_of_products_on_flavour_id", using: :btree
+    t.index ["product_id"], name: "index_flavours_of_products_on_product_id", using: :btree
+  end
+
   create_table "ingredients", force: :cascade do |t|
     t.string   "ingredient"
     t.datetime "created_at", null: false
@@ -159,6 +168,8 @@ ActiveRecord::Schema.define(version: 20170406010644) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "image"
+    t.integer  "review_id"
+    t.index ["review_id"], name: "index_products_on_review_id", using: :btree
   end
 
   create_table "rates", force: :cascade do |t|
@@ -187,8 +198,10 @@ ActiveRecord::Schema.define(version: 20170406010644) do
   create_table "reviews", force: :cascade do |t|
     t.string   "body"
     t.integer  "rating"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "customer_id"
+    t.index ["customer_id"], name: "index_reviews_on_customer_id", using: :btree
   end
 
   create_table "types", force: :cascade do |t|
@@ -199,15 +212,30 @@ ActiveRecord::Schema.define(version: 20170406010644) do
     t.index ["product_id"], name: "index_types_on_product_id", using: :btree
   end
 
+  create_table "types_of_products", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "product_id"
+    t.integer  "type_id"
+    t.index ["product_id"], name: "index_types_of_products_on_product_id", using: :btree
+    t.index ["type_id"], name: "index_types_of_products_on_type_id", using: :btree
+  end
+
   add_foreign_key "amounts", "flavours"
   add_foreign_key "amounts", "ingredients"
   add_foreign_key "flavours", "amounts"
   add_foreign_key "flavours", "products"
+  add_foreign_key "flavours_of_products", "flavours"
+  add_foreign_key "flavours_of_products", "products"
   add_foreign_key "locations", "customers"
   add_foreign_key "orders", "customers"
   add_foreign_key "orders", "events"
   add_foreign_key "orders", "productions"
   add_foreign_key "productions", "orders"
   add_foreign_key "productions", "products"
+  add_foreign_key "products", "reviews"
+  add_foreign_key "reviews", "customers"
   add_foreign_key "types", "products"
+  add_foreign_key "types_of_products", "products"
+  add_foreign_key "types_of_products", "types"
 end

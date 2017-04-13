@@ -5,22 +5,33 @@ class ReviewsController < ApplicationController
 
   def new
     # render json:[params]
-    @reviews = Review.new
+    @review = Review.new
   end
 
   def create
     # render json:[params]
-    @reviews = Review.new rating_params
-    @reviews.save
+    # @reviews = Review.new rating_params
+    @review = Review.new(review_params)
+    @review.customer_id = current_customer.id
+
+    if @review.save
     render :new
+    end
+  end
+
+  def edit
+    @review = Review.find(review_params)
   end
 
   def update
-    @reviews = Review.new rating_params
-    @reviews.save
-    render :new
+    @review = Review.find(review_params)
   end
 
+  private
+
+  def review_params
+    params.require(:review).permit(:rating)
+  end
 
 
 end

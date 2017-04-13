@@ -13,6 +13,10 @@ ActiveAdmin.register Product do
 #   permitted
 # end
 
+  filter :title
+  filter :description
+  filter :calories
+
   form(html: {multipart: true}) do |f|
     f.inputs "Attributes" do
       f.input :title
@@ -21,7 +25,6 @@ ActiveAdmin.register Product do
       f.input :image
     end
 
-
     f.inputs "Relationships" do
      f.input :types, as: :select, collection: Type.all.map{|type| [type.type_of, type.id]}
     end
@@ -29,10 +32,6 @@ ActiveAdmin.register Product do
     f.inputs "Relationships" do
       f.input :flavours, as: :select, collection: Flavour.all.map{|flavour| [flavour.flavour, flavour.id]}
     end
-
-    # f.inputs "Relationships" do
-    #   f.input :productions, as: :select, collection: Production.all.map{|production| [production.quantity, production.id]}
-    # end
 
     f.actions
   end
