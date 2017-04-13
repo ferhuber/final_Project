@@ -390,7 +390,7 @@ textarea.form-control {
 ////////////////////PRODUCT SHOW//////////////
 
 .product-background{
-  background-image: url("bg-prodicts.jpg");
+  background-image: url(asset-path("bg-prodicts.jpg"));
   overflow: hidden;
   background-size: cover;
 }
