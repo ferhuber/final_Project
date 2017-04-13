@@ -14,7 +14,7 @@
   border-color: #f65a53;
 }
 .order-background {
-  background-image: url("bg-quotation.jpg");
+  background-image: url(asset-path("bg-quotation.jpg"));
 
   height: 96vh;
   background-size: cover;
