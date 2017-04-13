@@ -46,7 +46,7 @@ $(document).ready(function(){
   });
 
   $(window).scroll(function (event) {
-    let scroll = $(window).scrollTop();
+    var scroll = $(window).scrollTop();
     if (scroll > 300) {
 
         jQuery('#nav .top').addClass('solid');
@@ -111,28 +111,28 @@ jQuery(document).ready(function ($) {
     //     moveRight();
     // });
 
-    $('#product-select').on('change',function() {
-      const prodID = ($('#product-select option:selected').attr('id'));
-      const url = 'http://localhost:3000/products/' + prodID + '.json';
-      $.get(url, function(data) {
-
-        data.flavours.forEach( function(flavour) {
-          let flav = '<option>' + flavour.flavour + '</option>';
-          $('#flavours').show();
-          $('#flavours').append(flav);
-        });
-
-        data.types.forEach( function(type) {
-          let typ = '<option>' + type.type_of + '</option>';
-          $('#types').show();
-          $('#types').append(typ);
-        })
-      })
-    });
-    $("#product-form").submit(function(event){
-      event.preventDefault();
-      $(".list-order").append($(`<div class="test">${event.target[0].value}</div>`))
-
-    });
+    // $('#product-select').on('change',function() {
+    //   const prodID = ($('#product-select option:selected').attr('id'));
+    //   const url = 'http://localhost:3000/products/' + prodID + '.json';
+    //   $.get(url, function(data) {
+    //
+    //     data.flavours.forEach( function(flavour) {
+    //       let flav = '<option>' + flavour.flavour + '</option>';
+    //       $('#flavours').show();
+    //       $('#flavours').append(flav);
+    //     });
+    //
+    //     data.types.forEach( function(type) {
+    //       let typ = '<option>' + type.type_of + '</option>';
+    //       $('#types').show();
+    //       $('#types').append(typ);
+    //     })
+    //   })
+    // });
+    // $("#product-form").submit(function(event){
+    //   event.preventDefault();
+    //   $(".list-order").append($(`<div class="test">${event.target[0].value}</div>`))
+    //
+    // });
 
 });

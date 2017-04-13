@@ -8,7 +8,7 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
-#/app/assets/images
+/app/assets/images
 #/config/initializers/app_keys.rb
 #/public/uploads/*
 **.orig
