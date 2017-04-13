@@ -59,8 +59,7 @@ h2{
 #nav{
   list-style: none;
   position: fixed;
-  right: 20px;
-  width: 98%;
+  width: 100%;
   z-index: 500;
 }
 
@@ -71,12 +70,11 @@ h2{
   height: 70px;
   display: none;
   z-index: 500;
-  margin-left: -22px;
 }
 
 #nav .top.solid .toggleDrawer i {
   padding-top: 8px;
-  margin-left: -15px;
+
 }
 
 #nav .top {
@@ -86,7 +84,6 @@ h2{
   padding: 30px;
   height: auto;
   z-index: 500;
-  margin-left: -15px;
   transition: all .5s;
 }
 
@@ -96,6 +93,7 @@ h2{
 
 #nav a{
   color: white;
+
 }
 
 #nav a:hover{
@@ -113,7 +111,8 @@ h2{
 
 .logIn{
   margin-right: 15px;
-  color: white
+  color: white;
+  font-size: 1.35em;
 }
 
 .logIn a{
@@ -401,6 +400,7 @@ textarea.form-control {
   margin-top: 30vh;
   overflow: scroll;
   height: 65vh;
+  display: inline-block;
 }
 
 .gallery-thumb{

@@ -3,11 +3,11 @@
 
 <div class="container-fluid ">
   <div class="row product-background">
-    <div class="col-lg-12">
+    <div class="col-md-12 col-lg-12">
 
 
 
-  <div class="menu col-lg-12">
+  <div class="menu rol col-lg-12">
 		<div class="col-lg-offset-1 col-lg-10">
 
 			<div class="pull-right">
@@ -31,27 +31,24 @@
 		<%= submit_tag "GO", class: "search-button" %>
 		<% end %>
 	</div>
+</div>
 
-  </div>
-  <div class=" row gallery col-lg-offset-1 col-lg-10 " id="js-gallery">
-    <% if  @found.present? %>
-	    <% @found.each do |f| %>
-	      <%= render "products/found", f: f %>
-	    <% end %>
-      <% else %>
-        <% @products.each do |p| %>
-          <%= render "products/product", p: p %>
-        <% end %>
+<div class=" row gallery col-lg-offset-1 col-lg-10 " id="js-gallery">
+  <% if  @found.present? %>
+    <% @found.each do |f| %>
+      <%= render "products/found", f: f %>
     <% end %>
-  </div>
+    <% else %>
+      <% @products.each do |p| %>
+        <%= render "products/product", p: p %>
+      <% end %>
+  <% end %>
+</div>
 
 	<!-- modal -->
 		<div id="imageModal" class="modal fade modal-style" role="dialog ">
 					<div class="modal-dialog">
-
-						<!-- Modal content-->
 						<div class="modal-content">
-
 						</div>
 					</div>
 			</div>
@@ -60,17 +57,14 @@
 	<!-- modal passwords_resets-->
 		<div id="imageModal1" class="modal fade modal-style" role="dialog ">
 					<div class="modal-dialog">
-
-						<!-- Modal content-->
 						<div class="modal-content">
-
 						</div>
 					</div>
 			</div>
 	<!--  modal passwords_resets-->
 
-  </div>
+	  </div>
+	</div>
 </div>
-
 
 <%= render "layouts/footer" %>
