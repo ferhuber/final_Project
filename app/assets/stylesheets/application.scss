@@ -36,3 +36,35 @@ body{
   margin-top: 0;
   margin-bottom: 0;
 }
+
+button, button:hover, button:focus, button:active{
+  outline: none;
+}
+
+////////////////////modal//////////////////////////
+.picture-modal{
+  width: 300px;
+}
+
+.modal-content{
+  max-height: 80vh;
+}
+
+.img-modal h3{
+  color: #f16169;
+}
+
+
+///////////////////footther///////////////////////
+.footer{
+  text-align: center;
+  background-color: black;
+  height: 50px;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 15px;
+}
+
+.footer p{
+  color: white;
+}

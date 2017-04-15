@@ -30,7 +30,8 @@ class PasswordsResetsController < ApplicationController
     else
       flash[:modal] = true
       render :edit
-    end
+
+  end
   end
 
 end

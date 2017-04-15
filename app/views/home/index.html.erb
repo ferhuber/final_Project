@@ -40,7 +40,7 @@
 							<div class="row ">
 								<div class="block-body col-lg-12">
 
-									<div class="the-menu col-lg-offset-3 col-lg-6">
+									<div class="the-menu col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
 											<span>the menu</span>
 
 											<a href="/products">
@@ -83,19 +83,16 @@
 
 <div id="third">
    <div class="story3">
-      <div class="float-left">
-				<div class="about-us">
+			<div class="about-us">
 
 					<h2/>HAVE A LOOK AT OUR BEAUTIFUL BAKERY<h2/>
 
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac pretium lectus. Sed suscipit rutrum ligula, quis commodo arcu ultricies accumsan. Sed id libero est. Vivamus et semper odio. Suspendisse vel semper eros.
-					Etiam bibendum in mi rhoncus egestas. Quisque volutpat magna quis nibh condimentum lacinia. Quisque venenatis tortor a pretium rutrum. Etiam elementum porta lorem sodales malesuada. Phasellus eu sapien posuere, sagittis nisi eu, efficitur velit. Donec varius, urna id interdum blandit, tellus ipsum tristique lectus, at blandit lectus lectus eu libero. Donec interdum velit sit amet rhoncus feugiat.
-					Suspendisse et tortor odio. Duis sed diam tincidunt, eleifend tortor sed, aliquet magna. Aliquam semper nibh a lectus posuere, vel bibendum ante tempus. Curabitur rhoncus lobortis est bibendum congue.
-					Proin rutrum orci metus, eu fringilla lacus dictum non. Morbi lorem nunc, tincidunt condimentum consectetur eget, consequat egestas massa. Cras placerat consectetur justo ac aliquet.
-					Nulla tempor eu erat dignissim lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus</p>
-
-				</div>
-      </div>
+					<p>
+					The Sugar Bakery has been serving our delicious baked goods for decades. From elegant wedding cakes and delicious buttercream cakes to breads and meat pies, we are sure to have the sweet and savoury items you’re looking for.
+					At our bakery, we make all of our offerings from scratch using only the freshest local ingredients.<br>
+					Over the years, Sugar Bakery has satisfied the desire of anyone looking for sweets. Our pastries are one of a kind and we realize that that a tasty dessert is a part of anyone's culture so our products take on a special significance.
+				</p>
+			</div>
    </div>
 </div>
 
@@ -103,9 +100,9 @@
    <div class="story4">
 		 <div class="content-block  " >
 			 <% if customer_signed_in? %>
-			 <div class="maps col-lg-offset-2 col-lg-10">
-				 <div class="col-lg-3 ">
-					 <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&origin=49.2400367,-122.9931887&destination=codecore+Vancouver,BC width="500px" height="220px""  ></iframe>
+			 <div class="maps col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+				 <div class="maps-frame col-lg-3 ">
+					 <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&origin=@location.longitude,@location.latitude&destination=codecore+Vancouver,BC"  ></iframe>
 				 </div>
 
 					<div class="content-store col-lg-3">
@@ -115,8 +112,8 @@
 						<p><i class="fa fa-phone-square fa-1x"></i> 778 990 7634</p>
 					</div>
 
-					<div class="col-lg-3">
- 					 <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&origin=49.2400367,-122.9931887&destination=BCIT+Burnaby,BC width="500px" height="220px"" ></iframe>
+					<div class="maps-frame col-lg-3">
+ 					 <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&origin=@location.latitude,@location.longitude&destination=BCIT+Burnaby,BC " ></iframe>
  				 </div>
 
  					<div class="content-store col-lg-3">
@@ -128,21 +125,21 @@
 			</div>
 					<% else %>
 					<div class="maps col-lg-offset-1 col-lg-10">
-						<div class="col-lg-3 ">
+						<div class="maps-frame col-lg-3 ">
 							<iframe src="  https://www.google.com/maps/embed/v1/place?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&q=CodeCore,+Vancouver,+BC&attribution_source=Google+Maps+Embed+API&attribution_ios_deep_link_id=comgooglemaps://?daddr=CodeCore,+Vancouver,+BC
-							" width="25px" height="220px"></iframe>
+							" ></iframe>
 						</div>
 
-						<div class="content-store col-lg-3">
+						<div class="maps-frame content-store col-lg-3">
 							<h4>Sugar Bakery Downtown</h4>
 							<p>1633 Bakery Street</p>
 							<p>Vancouver, British Columbia, Canada</p>
 							<p><i class="fa fa-phone-square fa-1x"></i> 778 990 7634</p>
 						</div>
 
-						<div class="col-lg-3">
+						<div class="maps-frame col-lg-3">
 							<iframe src="  https://www.google.com/maps/embed/v1/place?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&q=BCIT,+Burnaby,+BC&attribution_source=Google+Maps+Embed+API&attribution_ios_deep_link_id=comgooglemaps://?daddr=CodeCore,+Vancouver,+BC
-							" width="25px" height="220px"></iframe>
+							"></iframe>
 						</div>
 
 						<div class="content-store col-lg-3">
@@ -162,11 +159,7 @@
 
 <div id="fifth">
    <div class="story5">
-		 <div class="content-block " >
-			 <div class="container text-center">
-				 <h1><i>"Life is short, eat dessert first"</i></h1>
-			 </div>
-		 </div>
+		 <p><i>"Life is short, eat dessert first"</i></p>
    </div>
 </div>
 

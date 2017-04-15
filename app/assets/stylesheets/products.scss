@@ -121,143 +121,8 @@ h2{
   width: 100%;
 }
 
-/////////////// home////////////////////
-
-#intro{
-  background: image-url('hero-top.png') 50% 0 no-repeat fixed;
-  background-size: cover;
-  color: white;
-  height: 100vh;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-}
-
-#intro .slogan {
-  font-size: 2.25em;
-  margin-bottom: 15px;
-  margin-top: 18vh;
-  line-height: 1em;
-  font-family: 'Quicksand';
-  color: white;
-  border: 6px solid rgba(255, 255, 255, 0.7);
-  width: 50%;
-  margin-left: 25%;
-  padding: 40px;
-}
-
-#intro .secondary-slogan {
-  font-size: 1.2em;
-  color: rgba(255,255,255,.7);
-  line-height: 1em;
-  font-family: 'Alegreya SC';
-}
-
-#intro .top.solid {
-  background: #f16169;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  height: 85px;
-}
-
-#intro .top.solid .toggleDrawer i {
-  padding-top: 8px;
-}
 
 
-#second{
-  background-size: cover;
-  color: white;
-  height: 115vh;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0;
-  width: 100%;
-}
-
-.list-order{
-  height: 30vh;
-}
-
-#third{
-  background: image-url('store.jpg') 50% 0 no-repeat fixed;
-  background-size: cover;
-  color: black;
-  height: 80vh;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 18vh;
-}
-
-#third .about-us{
-  padding: 5%;
-  color: black;
-}
-
-#third .about-us h2{
-  font-family: 'Alegreya Sans' !important;
-  text-align: center;
-  color: black;
-}
-
-#forth{
-  background-size: cover;
-  color: white;
-  height: 46vh;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 3%;
-}
-
-iframe {
-margin: 40px;
-width: 250px;
-}
-
-.content-store{
-  height: 220px;
-  width: 240px;
-  margin-top: 40px;
-  margin-left: 25px;
-  font-size: 1.25em;
-  font-family: 'Quicksand';
-  color: white;
-  border: 4px solid rgba(255, 255, 255, 0.7);
-  padding: 15px;
-  text-align: center;
-  z-index: 300;
-}
-
-.content-store h4{
-  color: white;
-  font-family: 'Quicksand';
-}
-
-
-#fifth{
-  background: image-url('blue_mac2.jpg') 50% 0 no-repeat fixed;
-  background-size: cover;
-  color: white;
-  height: 26vh;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 3%;
-}
-
-.story3{
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
-  margin: 0 auto;
-  width: 100%;
-  overflow: auto;
-}
-
-.story5{
-  color: white;
-  margin: 0 auto;
-  width: 100%;
-  overflow: auto;
-}
 
 
 //////////////burger menu  ////////////////////////
@@ -397,7 +262,7 @@ textarea.form-control {
 .gallery{
   margin-top: 30vh;
   overflow: scroll;
-  height: 65vh;
+  height: 63vh;
   display: inline-block;
 }
 
@@ -531,4 +396,54 @@ textarea.form-control {
   margin-left: -20px;
   margin-right: -20px;
   padding: 15px;
+}
+
+
+
+@media (min-width: 720px){
+}
+
+@media (min-width: 970px){
+}
+
+@media (min-width: 1180px){
+}
+
+@media (min-width: 1180px){
+  .menu {
+
+    margin-top: 22vh !important;
+
+  }
+  .search {
+
+    margin-top: 28vh !important;
+
+  }
+
+  .gallery {
+    margin-top: 32vh !important;
+    height: 60vh !important;
+
+  }
+}
+
+@media (min-width: 1300px){
+  .menu {
+
+    margin-top: 17vh!important;
+
+  }
+
+  .search {
+
+    margin-top: 23vh !important;
+
+  }
+
+  .gallery {
+    margin-top: 32vh !important;
+    height: 63vh !important;
+
+  }
 }

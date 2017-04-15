@@ -17,7 +17,46 @@
   font-size: 1.45em
 }
 
-.back-cust{
-  margin-right: 40px;
-  font-weight: bold;
+.sessions input{
+  width: 100% !important;
+}
+
+
+.close-button{
+margin-right: 2%;
+
+}
+
+.hr-modal {
+    margin-left: -20px;
+    margin-top: -1vh;
+    width: 628px;
+ }
+
+.hr-modal-botton{
+  margin-left: -20px;
+  width: 598px;
+}
+
+.close-button button {
+  border: none;
+  text-decoration: none;
+  width: 0px;
+  border-radius: inherit;
+  box-shadow: none !important;
+  outline: none;
+  background-color: none !important;
+  background-image: none !important;
+}
+
+.close-button button:hover {
+  border: none;
+  text-decoration: none;
+  font-size: 2em;
+  width: 0px;
+  border-radius: inherit;
+  box-shadow: none;
+  outline: none;
+  background-color: none !important;
+  background-image: none;
 }
