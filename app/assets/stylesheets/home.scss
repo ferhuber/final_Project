@@ -478,23 +478,31 @@ h1 {
     text-transform: uppercase;
     line-height: 1.5;
     position: absolute;
-    margin-top: 25vh;
+    margin-top: 14vh;
     background-color: rgba(255, 255, 255, 0.7);
     height: 20vh;
     text-align: center;
   }
 
-  iframe {
-    margin: 40px;
-    width: 200px;
-    height: 200px;
-  }
+
+  .maps-frame{
+      width: 23%;
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+    }
+
+
 
   .content-store {
     height: 200px;
-    width: 200px;
+    width: 20%;
     margin-top: 40px;
-    margin-left: 25px;
+    margin-left: 3%;
     font-size: 1em;
     font-family: 'Quicksand';
     color: white;
@@ -510,39 +518,39 @@ h1 {
 
 }
 
-@media (min-width: 1300px){
+@media (min-width: 1281px){
 
   .tarteleft {
     position: absolute;
     left: 36px;
-    top: 62vh;
+    top: 68vh;
     z-index: 299;
   }
   .img-tarteleft {
-    width: 85%;
+    width: 82%;
     margin-top: -3vh;
   }
 
   .tarte {
     position: absolute;
-    top: 90vh;
+    top: 96vh;
     z-index: 301;
     margin-left: 86%;
   }
 
   .img-tarte {
-  width: 76%;
+  width: 70%;
   }
 
   .strawberry {
     position: absolute;
-    top: 52vh;
+    top: 56vh;
     z-index: 301;
     margin-left: 87%;
   }
 
   .img-strawbery {
-    width: 87%;
+    width: 83%;
   }
 
   #slider {
@@ -616,5 +624,180 @@ h1 {
     margin-top: 3vh;
     z-index: 1
   }
+
+
+
+}
+
+@media (min-width: 1500px) {
+
+  #second{
+    height: 120vh;
+  }
+
+  .tarteleft {
+    position: absolute;
+    left: 36px;
+    top: 68vh;
+    z-index: 299;
+  }
+  .img-tarteleft {
+    width: 78%;
+    margin-top: -3vh;
+  }
+
+  .tarte {
+    position: absolute;
+    top: 98vh;
+    z-index: 301;
+    margin-left: 86%;
+  }
+
+  .img-tarte {
+  width: 70%;
+  }
+
+  .strawberry {
+    position: absolute;
+    top: 56vh;
+    z-index: 301;
+    margin-left: 87%;
+  }
+
+  .img-strawbery {
+    width: 77%;
+  }
+
+  #slider {
+    position: relative;
+    overflow: hidden;
+    margin: 80px auto 0 -15px;
+  }
+
+  #slider ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    list-style: none;
+  }
+
+  #slider ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 2200px;
+    // width: 1366px;
+    height: 400px;
+    background: white;
+    text-align: center;
+    line-height: 300px;
+  }
+
+  .the-menu {
+    font-size: 30px;
+    font-family: "Quicksand";
+    color: #f65a53;
+    text-transform: uppercase;
+    line-height: 1.2;
+    position: absolute;
+    margin-top: 26vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 499;
+    height: 22vh;
+    text-align: center;
+    padding: 50px;
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+  #second{
+    height: 100vh;
+  }
+
+  .tarteleft {
+    position: absolute;
+    left: 46px;
+    top: 52vh;
+    z-index: 299;
+  }
+  .img-tarteleft {
+    width: 87%;
+    margin-top: -3vh;
+  }
+
+  .tarte {
+    position: absolute;
+    top: 80vh;
+    z-index: 301;
+    margin-left: 86%;
+  }
+
+  .img-tarte {
+  width: 70%;
+  }
+
+  .strawberry {
+    position: absolute;
+    top: 44vh;
+    z-index: 301;
+    margin-left: 87%;
+  }
+
+  .img-strawbery {
+    width: 77%;
+  }
+
+  #slider {
+    position: relative;
+    overflow: hidden;
+    margin: 80px auto 0 -15px;
+  }
+
+  #slider ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    list-style: none;
+  }
+
+  #slider ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 2200px;
+    // width: 1366px;
+    height: 400px;
+    background: white;
+    text-align: center;
+    line-height: 300px;
+  }
+
+  .the-menu {
+    font-size: 30px;
+    font-family: "Quicksand";
+    color: #f65a53;
+    text-transform: uppercase;
+    line-height: 1.2;
+    position: absolute;
+    margin-top: 26vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 499;
+    height: 22vh;
+    text-align: center;
+    padding: 50px;
+  }
+
+
+
+
+
 
 }
