@@ -520,6 +520,10 @@ h1 {
 
 @media (min-width: 1281px){
 
+  #second{
+    height: 120vh;
+  }
+
   .tarteleft {
     position: absolute;
     left: 36px;
@@ -575,7 +579,7 @@ h1 {
     padding: 0;
     width: 2200px;
     // width: 1366px;
-    height: 500px;
+    height: 400px;
     background: white;
     text-align: center;
     line-height: 300px;
