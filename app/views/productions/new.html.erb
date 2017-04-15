@@ -46,7 +46,7 @@
 
           Qty: <%= p.input_field :quantity %>
           <%= select_tag "products", options_for_select(@products_t), prompt: "Select" %>
-          <%= p.button :submit, 'Add', class: 'btn btn-primary'  %>
+          <%= p.button :submit, 'Add', class: 'btn btn-primary add-prod'  %>
           <% end %>
 
 		        <div class="text-production" id="js-text-production">

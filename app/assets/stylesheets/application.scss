@@ -41,6 +41,15 @@ button, button:hover, button:focus, button:active{
   outline: none;
 }
 
+form input[type=submit]{
+width: 150px;
+}
+
+.add-prod {
+font-size: 1em!important;
+
+}
+
 ////////////////////modal//////////////////////////
 .picture-modal{
   width: 300px;
