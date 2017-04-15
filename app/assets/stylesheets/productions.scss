@@ -1,15 +1,17 @@
 
 #production_quantity{
-  width: 100px;
-  border-radius: 5px;
-  color: #f65a53;
-  height: 30px;
+  width: 50px;
+    border-radius: 5px;
+    color: #f65a53;
+    height: 30px;
+    font-size: 0.75em;
 }
 
 #products{
   width: 140px;
   color: #f65a53;
   height: 30px;
+  font-size: 0.75em;
 }
 .text-production{
   color: white;
@@ -36,6 +38,7 @@
   padding: 10px;
   height: 5vh;
   z-index: 999;
+  font-size: 0.75em
 }
 
 .submit-order{

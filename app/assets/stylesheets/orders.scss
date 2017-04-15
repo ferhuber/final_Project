@@ -61,7 +61,7 @@
 
 #event_event_date,
 #event_delivery_date{
-  width: 175px !important;
+  width: 155px !important;
   position: relative;
   border-radius: 5px;
   color: #f65a53;
@@ -77,7 +77,7 @@
 
 #event_type_of,
 #order_store{
-  width: 140px;
+  width: 120px;
   border-radius: 5px;
   color: #f65a53;
   height: 30px;
@@ -99,7 +99,8 @@ font-size: 1.5em;
 
 .order-but{
   width: 100vh;
-  font-size: 1.25em!important;
+  font-size: 1.15em!important;
+
 
 }
 
@@ -111,7 +112,7 @@ font-size: 1.5em;
 
 @media (min-width: 1180px){
   .order-form {
-    font-size: 1em;
+    font-size: 1.25em;
     padding: 4%;
   }
   .order-background {
