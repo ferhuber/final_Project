@@ -10,9 +10,9 @@
   padding: 0;
 }
 
-
 //////////////////////PARALAX//////////////////
-#intro{
+
+#intro {
   background: image-url('hero-top.png') 50% 0 no-repeat fixed;
   background-size: cover;
   color: white;
@@ -49,12 +49,10 @@
   height: 85px;
 }
 
-#intro .top.solid .toggleDrawer i {
-  padding-top: 8px;
-}
+#intro .top.solid .toggleDrawer i { padding-top: 8px }
 
 
-#second{
+#second {
   background-size: cover;
   color: white;
   height: 115vh;
@@ -64,11 +62,9 @@
   width: 100%;
 }
 
-.list-order{
-  height: 30vh;
-}
+.list-order { height: 30vh }
 
-#third{
+#third {
   background: image-url('store.jpg') 50% 0 no-repeat fixed;
   background-size: cover;
   height: 80vh;
@@ -77,26 +73,23 @@
   padding-top: 18vh;
 }
 
-#third .about-us{
-  padding: 6%;
-}
+#third .about-us { padding: 6% }
 
-#third .about-us h2{
-  font-family: 'Helvetica' ;
+#third .about-us h2 {
+  font-family: 'Helvetica';
   text-align: center;
   color: black;
 }
 
-#third .about-us p{
-  font-family: 'Helvetica' ;
+#third .about-us p {
+  font-family: 'Helvetica';
   text-align: justify;
   color: black;
   font-size: 0.75em;
   line-height: 1.5;
 }
 
-
-#forth{
+#forth {
   background-size: cover;
   color: white;
   height: 46vh;
@@ -105,12 +98,7 @@
   padding-top: 3%;
 }
 
-iframe {
-margin: 40px;
-width: 250px;
-}
-
-.content-store{
+.content-store {
   height: 220px;
   width: 240px;
   margin-top: 40px;
@@ -124,13 +112,12 @@ width: 250px;
   z-index: 300;
 }
 
-.content-store h4{
+.content-store h4 {
   color: white;
   font-family: 'Quicksand';
 }
 
-
-#fifth{
+#fifth {
   background: image-url('blue_mac2.jpg') 50% 0 no-repeat fixed;
   background-size: cover;
   height: 26vh;
@@ -139,12 +126,9 @@ width: 250px;
   padding-top: 3%;
 }
 
-#fifth p {
-  color: white;
-  text-align: center;
-}
+#fifth p { color: white; text-align: center }
 
-.story3{
+.story3 {
   background-color: rgba(255, 255, 255, 0.9);
   color: black;
   margin: 0 auto;
@@ -152,7 +136,7 @@ width: 250px;
   overflow: auto;
 }
 
-.story5{
+.story5 {
   width: 100%;
   overflow: auto;
   text-align: justify;
@@ -162,7 +146,7 @@ width: 250px;
 
 /////////////////////////////////////
 
-.order{
+.order {
   border: 1.5px solid #ffffff;
   height: 31vh;
   padding: 50px;
@@ -193,9 +177,7 @@ width: 250px;
   text-decoration: none;
 }
 
-.arrow{
-  width: 30px;
-}
+.arrow { width: 30px }
 
 .the-menu {
   font-size: 30px;
@@ -212,9 +194,7 @@ width: 250px;
   padding: 50px;
 }
 
-
 .online-order {
-
   font-size: 2.25em;
   margin-bottom: 15px;
   margin-top: 14vh;
@@ -230,7 +210,6 @@ width: 250px;
   z-index: 300;
 }
 
-
 .tarteleft {
   position: absolute;
   left: 36px;
@@ -238,10 +217,7 @@ width: 250px;
   z-index: 299;
 }
 
-.img-tarteleft{
-  width: 87%;
-  margin-top: -3vh;
-}
+.img-tarteleft { width: 87%; margin-top: -3vh }
 
 .strawberry {
   position: absolute;
@@ -250,9 +226,7 @@ width: 250px;
   margin-left: 87%;
 }
 
-.img-strawbery {
-  width: 87%;
-}
+.img-strawbery { width: 87% }
 
 .tarte {
   position: absolute;
@@ -261,9 +235,7 @@ width: 250px;
   margin-left: 86%;
 }
 
-.img-tarte {
-  width: 76%;
-}
+.img-tarte { width: 76% }
 
 button{
   color: #f65a53;
@@ -282,48 +254,23 @@ button:not(.disabled):hover {
   background-color: white;
 }
 
-button a:hover{
+button a:hover {
   color: #f65a53;
-  // background-color: white !important;
   background-image: white;
   border-color: #f65a53;
   font-size: 0.075em;
   font-weight: normal;
 }
 
-.order-button{
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.order-button:hover{
-  background-color: red !important;
-}
-
-iframe {
-  margin: 40px;
-  width: 250px;
-  height: 220px;
-}
-
+.order-button       { background-color: rgba(255, 255, 255, 0.8) }
+.order-button:hover { background-color: red !important }
+iframe              { margin: 40px; width: 250px; height: 220px }
 
 ////////////////////slider//////////////////////
 
-html {
-  border-top: 5px solid #fff;
-  color: #2a2a2a;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans';
-}
-
-h1 {
-  color: #fff;
-  text-align: center;
-  font-weight: 300;
-}
+html, body { margin: 0; padding: 0 }
+html       { border-top: 5px solid #fff; color: #2a2a2a }
+h1         { color: #fff; text-align: center; font-weight: 300 }
 
 #slider {
   position: relative;
@@ -346,13 +293,11 @@ h1 {
   margin: 0;
   padding: 0;
   width: 2200px;
-  // width: 1366px;
   height: 450px;
   background: white;
   text-align: center;
   line-height: 300px;
 }
-
 
 .slider_option {
   position: relative;
@@ -361,394 +306,90 @@ h1 {
   font-size: 18px;
 }
 
-.products-img{
+.products-img {
   width: 100%;
   height: 100%
 }
 
-.nav-stacked{
+.nav-stacked {
   margin-top: 100px;
 }
 
 
-@media (min-width: 720px){
-  .alert {
-    margin-top: 3vh;
-    z-index: 1
+@media (min-width: 720px) {
+  .alert { margin-top: 3vh }
 }
 
+@media (min-width: 970px) {
+  .alert { margin-top: 3vh;z-index: 1 }
 }
 
-@media (min-width: 970px){
-  .alert {
-    margin-top: 3vh;
-    z-index: 1
-  }
-
-}
-
-
-
-@media (min-width: 1180px){
-
-  #intro .slogan {
-    font-size: 1.75em;
-  }
-  .online-order {
-    font-size: 2.0em;
-    margin-bottom: 15px;
-    margin-top: 11vh;
-    line-height: 1em;
-    font-family: 'Quicksand';
-    color: white;
-    border: 4px solid rgba(255, 255, 255, 0.7);
-    width: 76%;
-    padding: 5%;
-    text-align: center;
-    margin-left: 12%;
-    margin-right: 12%;
-    z-index: 300;
-  }
-
-  .tarteleft {
-    position: absolute;
-    left: 3%;
-    top: 66vh;
-    z-index: 299;
-  }
-  .img-tarteleft {
-    width: 64%;
-    margin-top: -3vh;
-  }
-
-  .tarte {
-    position: absolute;
-    top: 88vh;
-    z-index: 301;
-    margin-left: 86%;
-  }
-
-  .img-tarte {
-    width: 70%;
-  }
-
-  .strawberry {
-    position: absolute;
-    top: 52vh;
-    z-index: 301;
-    margin-left: 87%;
-  }
-
-  .img-strawbery {
-    width: 70%;
-  }
-
-  #slider {
-    position: relative;
-    overflow: hidden;
-    margin: 80px auto 0 -150px;
-  }
-
-  #slider ul {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 200px;
-    list-style: none;
-  }
-
-  #slider ul li {
-    position: relative;
-    display: block;
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 1500px;
-    // width: 1366px;
-    height: 350px;
-    background: white;
-    text-align: center;
-    line-height: 300px;
-  }
-
-  .the-menu {
-    font-size: 2em;
-    font-family: "Quicksand";
-    color: #f65a53;
-    text-transform: uppercase;
-    line-height: 1.5;
-    position: absolute;
-    margin-top: 14vh;
-    background-color: rgba(255, 255, 255, 0.7);
-    height: 20vh;
-    text-align: center;
-  }
-
-
-  .maps-frame{
-      width: 23%;
-      margin-left: 1%;
-      margin-right: 1%;
-    }
-
-    iframe {
-      width: 100%;
-      height: 200px;
-    }
-
-
+@media (min-width: 1180px) {
+  iframe         { width: 100%; height: 200px }
+  #intro .slogan { font-size: 1.75em }
+  #slider ul li  { width: 1500px; height: 350px }
+  .tarteleft     { top: 66vh }
+  .img-tarteleft { width: 64% }
+  .tarte         { top: 88vh }
+  .img-tarte     { width: 70% }
+  .img-strawbery { width: 70% }
+  .the-menu      { font-size: 2em; line-height: 1.5; margin-top: 25vh }
+  .maps-frame    { width: 23%; margin-left: 1%; margin-right: 1% }
 
   .content-store {
-    height: 200px;
     width: 20%;
-    margin-top: 40px;
     margin-left: 3%;
     font-size: 1em;
-    font-family: 'Quicksand';
-    color: white;
-    border: 4px solid rgba(255, 255, 255, 0.7);
-    padding: 15px;
-    text-align: center;
-    z-index: 300;
-  }
-  .alert {
-    margin-top: 3vh;
-    z-index: 1
+    height: 200px;
   }
 
+  .online-order {
+    font-size: 2.0em;
+    margin-top: 72vh;
+    width: 76%;
+    padding: 5%;
+    margin-left: 12%;
+    margin-right: 12%;
+  }
 }
 
-@media (min-width: 1281px){
-
-  #second{
-    height: 116vh;
-  }
-
-  .tarteleft {
-    position: absolute;
-    left: 36px;
-    top: 62vh;
-    z-index: 299;
-  }
-  .img-tarteleft {
-    width: 82%;
-    margin-top: -3vh;
-  }
-
-  .tarte {
-    position: absolute;
-    top: 96vh;
-    z-index: 301;
-    margin-left: 86%;
-  }
-
-  .img-tarte {
-  width: 70%;
-  }
-
-  .strawberry {
-    position: absolute;
-    top: 55vh;
-    z-index: 301;
-    margin-left: 87%;
-  }
-
-  .img-strawbery {
-    width: 83%;
-  }
-
-  #slider {
-    position: relative;
-    overflow: hidden;
-    margin: 80px auto 0 -15px;
-  }
-
-  #slider ul {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 200px;
-    list-style: none;
-  }
-
-  #slider ul li {
-    position: relative;
-    display: block;
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 2200px;
-    // width: 1366px;
-    height: 400px;
-    background: white;
-    text-align: center;
-    line-height: 300px;
-  }
-
-  .the-menu {
-    font-size: 30px;
-    height: 20vh;
-    padding: 50px;
-    margin-top: 25vh;
-
-  }
-
-  .maps-frame{
-    width: 23%;
-    margin-left: 1%;
-    margin-right: 1%;
-  }
-
-  iframe {
-    width: 100%;
-    height: 240px;
-  }
-
-  .content-store {
-    height: 240px;
-    width: 20%;
-    margin-top: 40px;
-    margin-left: 25px;
-    font-size: 1.25em;
-
-    padding: 2%;
-
-  }
-  .alert {
-    margin-top: 3vh;
-
-  }
-
-
-
+@media (min-width: 1281px) {
+  iframe         { width: 100%; height: 240px }
+  #second        { height: 116vh }
+  #slider ul li  { height: 400px; width: 2200px; }
+  .img-tarteleft { width: 82% }
+  .tarte         { top: 96vh; margin-left: 86% }
+  .img-tarte     { width: 70% }
+  .strawberry    { top: 55vh }
+  .img-strawbery { width: 83% }
+  .the-menu      { margin-top: 25vh }
+  .maps-frame    { width: 23%; margin-left: 1%; margin-right: 1% }
+  .content-store { height: 240px; width: 20%; padding: 2% }
+  .alert         { margin-top: 3vh }
+  .online-order { margin-top: 9vh }
 }
 
 @media (min-width: 1500px) {
-
-  #second{
-    height: 122vh;
-  }
-
-  .tarteleft {
-    position: absolute;
-    left: 36px;
-    top: 68vh;
-    z-index: 299;
-  }
-  .img-tarteleft {
-    width: 78%;
-    margin-top: -3vh;
-  }
-
-  .tarte {
-    position: absolute;
-    top: 98vh;
-    z-index: 301;
-    margin-left: 86%;
-  }
-
-  .img-tarte {
-  width: 70%;
-  }
-
-  .strawberry {
-    position: absolute;
-    top: 56vh;
-    z-index: 301;
-    margin-left: 87%;
-  }
-
-  .img-strawbery {
-    width: 77%;
-  }
-
-  #slider {
-    position: relative;
-    overflow: hidden;
-    margin: 80px auto 0 -15px;
-  }
-
-  #slider ul {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 200px;
-    list-style: none;
-  }
-
-  #slider ul li {
-    height: 400px;
-  }
-
-  .the-menu {
-    margin-top: 26vh;
-    height: 22vh;
-    padding: 50px;
-  }
-
+  #second        { height: 122vh }
+  #slider ul li  { height: 400px; width: 2200px; }
+  .tarteleft     { top: 68vh }
+  .img-tarteleft { width: 78%; margin-top: -3vh }
+  .tarte         { top: 98vh }
+  .img-tarte     { width: 70% }
+  .strawberry    { top: 56vh }
+  .img-strawbery { width: 77% }
+  .the-menu      { margin-top: 26vh; height: 22vh }
+  .online-order { margin-top: 12vh }
 }
 
 @media (min-width: 1600px) {
-
-  #second{
-    height: 100vh;
-  }
-
-  .tarteleft {
-    position: absolute;
-    left: 46px;
-    top: 52vh;
-    z-index: 299;
-  }
-  .img-tarteleft {
-    width: 87%;
-    margin-top: -3vh;
-  }
-
-  .tarte {
-    position: absolute;
-    top: 80vh;
-    z-index: 301;
-    margin-left: 86%;
-  }
-
-  .img-tarte {
-  width: 70%;
-  }
-
-  .strawberry {
-    position: absolute;
-    top: 44vh;
-    z-index: 301;
-    margin-left: 87%;
-  }
-
-  .img-strawbery {
-    width: 77%;
-  }
-
-  #slider {
-    position: relative;
-    overflow: hidden;
-    margin: 80px auto 0 -15px;
-  }
-
-  #slider ul {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 200px;
-    list-style: none;
-  }
-
-  #slider ul li {
-    height: 400px;
-  }
-
-  .the-menu {
-
-    margin-top: 18vh;
-
-  }
-
+  #second        { height: 100vh }
+  #slider ul li  { height: 400px; width: 2200px; }
+  .tarteleft     { left: 46px; top: 52vh }
+  .tarte         { top: 80vh }
+  .img-tarte     { width: 70% }
+  .strawberry    { top: 44vh }
+  .img-strawbery { width: 77% }
+  .the-menu      { margin-top: 18vh }
+  .online-order { margin-top: 8vh }
 }

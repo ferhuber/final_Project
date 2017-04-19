@@ -2,44 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.sessions{
-  background-color: white !important;
-  color: #f16169;
-}
-
-.sessions a, a:link, a:visited, h2, input{
+.sessions        { background-color: white !important; color: #f16169 }
+.sessions p      { color: #f16169; font-size: 1.45em }
+.sessions input  { width: 100% !important }
+.sessions a, a:link, a:visited, h2, input {
   text-decoration: none;
-  color: #f16169;
+  color: #f16169
 }
-
-.sessions p{
-  color: #f16169;
-  font-size: 1.45em
-}
-
-.sessions input{
-  width: 100% !important;
-}
-
-.sign-button{
-  font-size: 1.35em!important;
-}
-
-.close-button{
-margin-right: 2%;
-
-}
-
-.hr-modal {
-    margin-left: -20px;
-    margin-top: -1vh;
-    width: 628px;
- }
-
-.hr-modal-botton{
-  margin-left: -20px;
-  width: 598px;
-}
+.sign-button     { font-size: 1.35em!important }
+.close-button    { margin-right: 2% }
+.hr-modal        { margin-left: -20px; margin-top: -1vh; width: 628px }
+.hr-modal-botton { margin-left: -20px; width: 598px }
 
 .close-button button {
   border: none;

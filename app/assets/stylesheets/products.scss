@@ -1,60 +1,43 @@
 @charset "utf-8";
 
-a{
-  color: white ;
-}
+a { color: white; text-decoration: none !important }
 
-p{
-  margin: 0 0 20px 0;
-}
+p { margin: 0 0 20px 0 }
 
-p, ul{
+p, ul {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size-adjust:0.488;
   font-weight:200;
   font-style:normal;
 }
 
-img{
-  border: 0;
-  width: 100%;
-}
+img { border: 0; width: 100% }
 
-h1, #pixels{
+h1, #pixels {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size-adjust:0.40;
   font-weight:700;
-    font-style:normal;
+  font-style:normal;
 }
 
-h2{
+h2 {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size-adjust:0.531;
   font-weight:500;
   font-style:normal;
 }
 
-#header h1, #pixels{
-  color: #48941A;
-}
+#header h1, #pixels { color: #48941A }
 
-.float-left{
-  float: left;
-  margin: 0 0 0 20px;
-}
+.float-left { float: left; margin: 0 0 0 20px }
+.float-right{ float: right; margin: 0 20px 0 0 }
 
-.float-right{
-  float: right;
-  margin: 0 20px 0 0;
-}
-
-.center{
-  font-size: 2.5em;
+.center { font-size: 2.5em;
   padding: 80px 0 0 0;
   text-align: center;
 }
 
-#nav{
+#nav {
   list-style: none;
   position: fixed;
   width: 100%;
@@ -70,10 +53,7 @@ h2{
   z-index: 500;
 }
 
-#nav .top.solid .toggleDrawer i {
-  padding-top: 8px;
-
-}
+#nav .top.solid .toggleDrawer i { padding-top: 8px }
 
 #nav .top {
   position: fixed;
@@ -85,27 +65,12 @@ h2{
   transition: all .5s;
 }
 
-#nav li{
-  margin: 0 0 15px 0;
-}
+#nav li                 { margin: 0 0 15px 0 }
+#nav a                  { color: white }
+#nav a:hover            { color: #f05d66 }
+#nav .top.solid a:hover { color: white }
 
-#nav a{
-  color: white;
-
-}
-
-#nav a:hover{
-  color: #f05d66;
-}
-
-#nav .top.solid a:hover{
-  color: white;
-}
-
-.Logo-small{
-  display: none;
-  width: 70%;
-}
+.Logo-small { display: none; width: 70% }
 
 .logIn{
   margin-right: 15px;
@@ -113,17 +78,7 @@ h2{
   font-size: 1.35em;
 }
 
-.logIn a{
-  text-decoration: none !important;
-}
-
-#header, #intro, #second{
-  width: 100%;
-}
-
-
-
-
+#header, #intro, #second{ width: 100% }
 
 //////////////burger menu  ////////////////////////
 
@@ -162,21 +117,19 @@ h2{
   font-size: 1.2em;
 }
 
-#drawer-right .social{margin-top: 50px}
-#drawer-right .social ul {
+#drawer-right .social                   { margin-top: 50px }
+#drawer-right .social ul                {
   list-style: none;
-  padding-left: 25px;
+  padding-left: 25px
 }
+
 #drawer-right .social ul > li {
   display: inline-block;
-  margin: 3%;
+  margin: 3%
 }
-#drawer-right .social ul > li > a:hover{
-	color: white;
-}
-#drawer-right .fa{
-  color: #f16169;
-}
+
+#drawer-right .social ul > li > a:hover { color: white }
+#drawer-right .fa                       { color: #f16169 }
 
 .nav> li> a:focus, .nav>li>a:hover{
   text-decoration: none;
@@ -219,12 +172,9 @@ h2{
   background-color: white !important;
 }
 
-.main-img{
-  width: 50%;
-  height: 30vh;
-}
+.main-img { width: 50%; height: 30vh }
 
-.description{
+.description {
   margin-right: 0px;
   margin-left: 50px;
   margin-top: 21px;
@@ -236,37 +186,26 @@ h2{
 
 /////////////// FORMS //////////////////////
 
-.form-template{
-  background-color: white;
-  padding: 20px;
-}
-
-textarea.form-control {
-  height: auto;
-  width: 78%;
-}
-
-.form-tags{
-  width: 200px;
-}
+textarea.form-control { height: auto; width: 78% }
+.form-template { background-color: white; padding: 20px }
+.form-tags { width: 200px }
 
 ////////////////////PRODUCT SHOW//////////////
 
-.product-background{
+.product-background {
   background-image: url(asset-path("bg-prodicts.jpg"));
   overflow: hidden;
   background-size: cover;
 }
 
-
-.gallery{
+.gallery {
   margin-top: 30vh;
   overflow: scroll;
   height: 63vh;
   display: inline-block;
 }
 
-.gallery-thumb{
+.gallery-thumb {
   height: 215px;
   width: 215px;
   color: black;
@@ -287,9 +226,7 @@ textarea.form-control {
 
 .recent-work {
   width: 100%;
-  // padding-bottom: 39%;
   background: #FFFFFF;
-  // display: table;
   text-align: center;
   vertical-align: middle;
   padding-top: 50%;
@@ -300,14 +237,14 @@ textarea.form-control {
   margin-bottom: 0px;
 }
 
-.recent-work span{
+.recent-work span {
 	margin-top: 15px;
 	opacity: 0;
 	position: relative;
 	z-index: 1;
 }
 
-.recent-work .prod-hover-desc{
+.recent-work .prod-hover-desc {
   margin-top: -68px;
   opacity: 0;
   text-align: left;
@@ -320,9 +257,7 @@ textarea.form-control {
   font-size: 1.25em;
 }
 
-.prod-hover-desc .fa{
-  color: #f16169;
-}
+.prod-hover-desc .fa { color: #f16169 }
 
 .recent-work:before {
   background: rgba(255, 255, 255, 0.7);
@@ -333,10 +268,6 @@ textarea.form-control {
   top: 0;
   content: '';
   opacity: 0;
-  // -o-transition: all .2s;
-	-ms-transition: all .2s;
-	-moz-transition: all .2s;
-	-webkit-transition: all .2s;
 	transition: all .2s;
 }
 
@@ -346,49 +277,30 @@ textarea.form-control {
   text-decoration: none;
 }
 
-.recent-work:hover:before, .recent-work:hover span{
+.recent-work:hover:before, .recent-work:hover span {
   opacity: 1;
 }
 
-.recent-work:hover:before, .recent-work:hover .prod-hover-desc{
+.recent-work:hover:before, .recent-work:hover .prod-hover-desc {
   opacity: 1;
   text-decoration: none;
 }
 
 ////////////////////////////////search/////////////
 
-#product-form {
-  color: black;
-}
-
-#flavours{
-  display: none;
-}
-
-#types{
-  display: none;
-}
-
-.search-products{
-  color: black;
-}
+#product-form    { color: black }
+#flavours        { display: none }
+#types           { display: none}
+.search-products { color: black }
 
 ////////////////////modal//////////////////////////
-.picture-modal{
-  width: 300px;
-}
-
-.modal-content{
-  max-height: 80vh;
-}
-
-.img-modal h3{
-  color: #f16169;
-}
+.picture-modal { width: 300px }
+.modal-content { max-height: 80vh }
+.img-modal h3  { color: #f16169 }
 
 
 ///////////////////footther///////////////////////
-.footer{
+.footer {
   text-align: center;
   color: white;
   background-color: black;
@@ -398,8 +310,6 @@ textarea.form-control {
   padding: 15px;
 }
 
-
-
 @media (min-width: 720px){
 }
 
@@ -407,43 +317,22 @@ textarea.form-control {
 }
 
 @media (min-width: 1180px){
+  .menu          { margin-top: 22vh !important }
+  .search        { margin-top: 28vh !important }
+  .gallery       { margin-top: 32vh !important; height: 60vh !important}
+  .gallery-thumb { width: 22% }
 }
 
-@media (min-width: 1180px){
-  .menu {
-
-    margin-top: 22vh !important;
-
-  }
-  .search {
-
-    margin-top: 28vh !important;
-
-  }
-
-  .gallery {
-    margin-top: 32vh !important;
-    height: 60vh !important;
-
-  }
+@media (min-width: 1300px) and (max-width:1400px){
+  .menu          { margin-top: 23vh  !important }
+  .search        { margin-top: 30vh !important }
+  .gallery       { margin-top: 34vh !important; height: 63vh !important }
+  .gallery-thumb { width: 22% }
 }
 
-@media (min-width: 1300px){
-  .menu {
-
-    margin-top: 17vh!important;
-
-  }
-
-  .search {
-
-    margin-top: 23vh !important;
-
-  }
-
-  .gallery {
-    margin-top: 32vh !important;
-    height: 63vh !important;
-
-  }
+@media (min-width: 1401px){
+  .menu          { margin-top: 23vh  !important }
+  .search        { margin-top: 30vh !important }
+  .gallery       { margin-top: 34vh !important; height: 63vh !important }
+  .gallery-thumb { width: 18% }
 }

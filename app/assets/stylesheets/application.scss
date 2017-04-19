@@ -24,10 +24,7 @@
  font-style: normal;
 }
 
-p, ul{
-  font-family: 'Quicksand' ;
-
-}
+p, ul { font-family: 'Quicksand' }
 
 body{
   background-color: white;
@@ -38,33 +35,16 @@ body{
   height: 100%;
 }
 
-button, button:hover, button:focus, button:active{
-  outline: none;
-}
+button, button:hover, button:focus, button:active { outline: none }
 
-form input[type=submit]{
-width: 150px;
-}
+form input[type=submit] { width: 150px }
 
-.add-prod {
-font-size: 1em!important;
-
-}
+.add-prod { font-size: 1em!important }
 
 ////////////////////modal//////////////////////////
-.picture-modal{
-  width: 300px;
-}
-
-.modal-content{
-  max-height: 80vh;
-}
-
-.img-modal h3{
-  color: #f16169;
-}
-
-
+.picture-modal { width: 300px }
+.modal-content { max-height: 80vh }
+.img-modal h3  { color: #f16169 }
 ///////////////////footther///////////////////////
 .footer{
   text-align: center;
@@ -75,6 +55,4 @@ font-size: 1em!important;
   padding: 15px;
 }
 
-.footer p{
-  color: white;
-}
+.footer p { color: white }

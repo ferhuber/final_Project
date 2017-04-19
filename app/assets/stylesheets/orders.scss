@@ -4,23 +4,21 @@
 // .simple_form {
 //   color: black !important;
 // }
-.modal-header, .modal-body {
-  color: black;
-}
+.modal-header, .modal-body { color: black }
 
-.btn-primary{
+.btn-primary {
   color: #f65a53;
   background-color: white;
-  border-color: #f65a53;
+  border-color: #f65a53
 }
+
 .order-background {
   background-image: url(asset-path("bg-quotation.jpg"));
-
   height: 96vh;
   background-size: cover;
 }
 
-.menu-order{
+.menu-order {
   background-color: rgba(246, 90, 83, 0.50);
   margin-top: 20vh;
   padding-top: 15px;
@@ -28,7 +26,7 @@
   z-index: 600;
 }
 
-.order-form{
+.order-form {
   background-color: rgba(246, 90, 83, 0.50);
   margin-top: 2vh;
   margin-right: -15px;
@@ -38,10 +36,9 @@
   text-align: center;
   font-family: 'Quicksand';
   font-size: 1.5em;
-
 }
 
-.order-form2{
+.order-form2 {
   background-color: rgba(246, 90, 83, 0.50);
   margin-top: 2vh;
   margin-right: -15px;
@@ -54,13 +51,10 @@
   height: 54vh;
 }
 
-.menu-order a{
-  color: white !important;
-
-}
+.menu-order a { color: white !important }
 
 #event_event_date,
-#event_delivery_date{
+#event_delivery_date {
   width: 155px !important;
   position: relative;
   border-radius: 5px;
@@ -76,33 +70,24 @@
 
 
 #event_type_of,
-#order_store{
+#order_store {
   width: 120px;
   border-radius: 5px;
   color: #f65a53;
   height: 30px;
 }
 
-.simple_form{
-  color: white !important;
+.simple_form { color: white !important }
+
+.order-custumer {
+  color: #f65a53;
+  line-height: 10%;
+  font-size: 1.5em;
 }
 
-.order-custumer{
-color: #f65a53;
-line-height: 10%;
-font-size: 1.5em;
-}
+.order-button2 { margin-top: 2vh }
 
-.order-button2{
-  margin-top: 2vh;
-}
-
-.order-but{
-  width: 100vh;
-  font-size: 1.15em!important;
-
-
-}
+.order-but { width: 100vh; font-size: 1.15em!important }
 
 @media (min-width: 720px){
 }
@@ -111,20 +96,7 @@ font-size: 1.5em;
 }
 
 @media (min-width: 1180px){
-  .order-form {
-    font-size: 1.25em;
-    padding: 4%;
-  }
-  .order-background {
-    height: 92vh;
-  }
-
-  .submit-order {
-    margin-top: 23vh!important;
-}
-}
-
-
-@media (min-width: 1300px){
-
+  .order-form       { font-size: 1.25em; padding: 4% }
+  .order-background { height: 92vh }
+  .submit-order     { margin-top: 23vh!important }
 }

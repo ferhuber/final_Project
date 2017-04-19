@@ -1,4 +1,4 @@
-.menu{
+.menu {
   color: white;
   background-color: rgba(158, 158, 158, 0.24);
   margin-bottom: 20px;
@@ -9,16 +9,9 @@
   z-index: 502;
   width: 100%;
 }
-  .menu a{
-    color: white !important;
-    }
 
-.pull-right a{
-  text-decoration: none !important;
-  color: white;
-
-
-}
+.menu a       { color: white !important }
+.pull-right a { text-decoration: none !important; color: white }
 
 .search{
   background-color: rgba(241, 97, 105, 0.52);
@@ -31,14 +24,6 @@
   z-index: 100;
 }
 
-.search-text{
-  color: white;
-}
-
-.search-button{
-  background-color: white !important;
-}
-
-.search-button a:hover{
-  background-color: rgba(241, 97, 105, 0.17) !important;
-}
+.search-text           { color: white }
+.search-button         { background-color: white !important }
+.search-button a:hover { background-color: rgba(241, 97, 105, 0.17) !important }

@@ -36,9 +36,9 @@
 
 		<div id="second">
 		   <div class="story">
-				 <div class="container col-lg-12">
+				 <div class="container col-md-12 col-lg-12">
 							<div class="row ">
-								<div class="block-body col-lg-12">
+								<div class="block-body col-md-12 col-lg-12">
 
 									<div class="the-menu col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
 											<span>the menu</span>
@@ -101,22 +101,22 @@
 		 <div class="content-block  " >
 			 <% if customer_signed_in? %>
 			 <div class="maps col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
-				 <div class="maps-frame col-lg-3 ">
+				 <div class="maps-frame col-md-3 col-lg-3 ">
 					 <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&origin=<%=@location.latitude%>,<%=@location.longitude%>&destination=codecore+Vancouver,BC"  ></iframe>
 				 </div>
 
-					<div class="content-store col-lg-3">
+					<div class="content-store col-md-3 col-lg-3">
 						<h4>Sugar Bakery Downtown</h4>
 						<p>1633 Bakery Street</p>
 						<p>Vancouver, British Columbia, Canada</p>
 						<p><i class="fa fa-phone-square fa-1x"></i> 778 990 7634</p>
 					</div>
 
-					<div class="maps-frame col-lg-3">
+					<div class="maps-frame col-md-3 col-lg-3">
  					 <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&origin=<%=@location.latitude%>,<%=@location.longitude%>&destination=BCIT+Burnaby,BC " ></iframe>
  				 </div>
 
- 					<div class="content-store col-lg-3">
+ 					<div class="content-store col-md-3 col-lg-3">
 						<h4>Sugar Bakery Burnaby</h4>
 						<p>1234 Sugar Street</p>
 						<p>Burnaby, British Columbia, Canada</p>
@@ -125,24 +125,24 @@
 			</div>
 					<% else %>
 					<div class="maps col-lg-offset-1 col-lg-10">
-						<div class="maps-frame col-lg-3 ">
+						<div class="maps-frame col-md-3 col-lg-3 ">
 							<iframe src="  https://www.google.com/maps/embed/v1/place?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&q=CodeCore,+Vancouver,+BC&attribution_source=Google+Maps+Embed+API&attribution_ios_deep_link_id=comgooglemaps://?daddr=CodeCore,+Vancouver,+BC
 							" ></iframe>
 						</div>
 
-						<div class="maps-frame content-store col-lg-3">
+						<div class="maps-frame content-store col-md-3 col-lg-3">
 							<h4>Sugar Bakery Downtown</h4>
 							<p>1633 Bakery Street</p>
 							<p>Vancouver, British Columbia, Canada</p>
 							<p><i class="fa fa-phone-square fa-1x"></i> 778 990 7634</p>
 						</div>
 
-						<div class="maps-frame col-lg-3">
+						<div class="maps-frame col-md-3 col-lg-3">
 							<iframe src="  https://www.google.com/maps/embed/v1/place?key=AIzaSyCreN2Qn8QXzUr1h9Gj140Imwa8EAEmPJs&q=BCIT,+Burnaby,+BC&attribution_source=Google+Maps+Embed+API&attribution_ios_deep_link_id=comgooglemaps://?daddr=CodeCore,+Vancouver,+BC
 							"></iframe>
 						</div>
 
-						<div class="content-store col-lg-3">
+						<div class="content-store col-md-3 col-lg-3">
 							<h4>Sugar Bakery Burnaby</h4>
 							<p>1234 Sugar Street</p>
 							<p>Burnaby, British Columbia, Canada</p>

@@ -101,38 +101,22 @@ jQuery(document).ready(function ($) {
         });
     };
 
-    // $('a.control_prev').click(function (e) {
-    //   e.preventDefault();
-    //     moveLeft();
-    // });
-    //
-    // $('a.control_next').click(function (e) {
-    //   e.preventDefault();
-    //     moveRight();
-    // });
+    $(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 
-    // $('#product-select').on('change',function() {
-    //   const prodID = ($('#product-select option:selected').attr('id'));
-    //   const url = 'http://localhost:3000/products/' + prodID + '.json';
-    //   $.get(url, function(data) {
-    //
-    //     data.flavours.forEach( function(flavour) {
-    //       let flav = '<option>' + flavour.flavour + '</option>';
-    //       $('#flavours').show();
-    //       $('#flavours').append(flav);
-    //     });
-    //
-    //     data.types.forEach( function(type) {
-    //       let typ = '<option>' + type.type_of + '</option>';
-    //       $('#types').show();
-    //       $('#types').append(typ);
-    //     })
-    //   })
-    // });
-    // $("#product-form").submit(function(event){
-    //   event.preventDefault();
-    //   $(".list-order").append($(`<div class="test">${event.target[0].value}</div>`))
-    //
-    // });
+
+
 
 });
