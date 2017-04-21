@@ -8,7 +8,7 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
-/config/initializers/app_keys.rb
+#/config/initializers/app_keys.rb
 /public/uploads/*
 **.orig
 rerun.txt
